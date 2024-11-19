@@ -24,8 +24,10 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Build job
   build:
+    env:
+      VITE_SITEURL: ${{ secrets.VITE_SITEURL}}
+      VITE_COMMENT_URL: ${{ secrets.VITE_COMMENT_URL}}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
