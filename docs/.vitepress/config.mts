@@ -18,11 +18,11 @@ const github_link_url = 'https://github.com/virak-cloud/docs/edit/main/docs/:pat
 
 export default defineConfig({
   // shared properties and other top-level stuff...
-  rewrites: {
-    'docs/fa': 'docs/fa/guides',
-    'docs/en': 'docs/en/guides',
+  // rewrites: {
+    // 'docs/fa': 'docs/fa/guides',
+    // 'docs/en': 'docs/en/guides',
   // 'docs/:lang/:slug*': ':lang/:slug*'
-   },
+  // },
   lang: 'fa-IR',
   cleanUrls: true,
   // title: "Virak Cloud",
