@@ -1,0 +1,11 @@
+/node_modules
+bun.lockb
+.vitepress/dist/**
+docs/.vitepress/cache/**
+docs/.vitepress/dist
+.vscode/**
+*.log**
+.env*
+*-lock.json
+*-lock.yaml
+.hintrc

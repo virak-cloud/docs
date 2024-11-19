@@ -1,0 +1,4 @@
+version: '3'
+services:
+  docs_web_server:
+    image: git.acs.taknet.net:8888/acs/docs-project-frontend/docs_web_server:VERSION_HERE

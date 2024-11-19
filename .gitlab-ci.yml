@@ -1,0 +1,68 @@
+stages:
+  - build
+  - deployment
+
+build:
+  stage: build
+  image: docker:latest
+  tags:
+    - docker
+  only:
+    - master
+    - dev
+  parallel:
+    matrix:
+      - IMAGE_NAME: ['docs_web_server']
+  variables:
+    TAG_REGISTRY_IMAGE: $CI_REGISTRY_IMAGE/$IMAGE_NAME
+
+  before_script:
+    - echo $CI_REGISTRY_PASSWORD | docker login -u "$CI_REGISTRY_USER" --password-stdin $CI_REGISTRY
+    - echo $CI_REGISTRY_IMAGE/$IMAGE_NAME
+    - echo "$DOCS_ENV_FILE"
+  cache: []
+  script:
+    - version=$CI_COMMIT_REF_NAME$(date "+%Y%m%d")
+    - docker build
+      --compress
+      --no-cache
+      --file $PWD/.docker/production/Dockerfile
+      --tag $TAG_REGISTRY_IMAGE:$version
+      --target $IMAGE_NAME
+      --build-arg DOCS_ENV_FILE=${DOCS_ENV_FILE}
+      --build-arg CI_JOB_TOKEN=${CI_JOB_TOKEN}
+      .
+    - docker push $TAG_REGISTRY_IMAGE:$version
+
+deployment-dev:
+  image: alpine:latest
+  stage: deployment
+  only:
+    - dev
+  retry: 2
+  before_script:
+    - apk add --no-cache --upgrade bash
+  script:
+    - echo "Starting to deploy"
+    - whoami
+    - uname -a
+    - echo "user $DOCS_SERVER_USER_DEV"
+    - echo "ip $DOCS_SERVER_IP_DEV"
+    - echo "id_rsa $DOCS_ID_RSA_DEV"
+    - (which ifconfig) || (apt install net-tools)
+    - /sbin/ifconfig
+    - touch blah
+    - find .
+    - chmod og= "$DOCS_ID_RSA_DEV"
+    - apk update && apk add openssh-client
+    - version=$CI_COMMIT_REF_NAME$(date "+%Y%m%d")
+    - sed -i "s/VERSION_HERE/$version/g" docker-compose.frontend.docs.yml
+    - scp -P 22122 -i $DOCS_ID_RSA_DEV -o StrictHostKeyChecking=no docker-compose.frontend.docs.yml $DOCS_SERVER_USER_DEV@$DOCS_SERVER_IP_DEV:/home/ubuntu/$CI_COMMIT_REF_NAME
+    - ssh -p 22122 -i $DOCS_ID_RSA_DEV -o StrictHostKeyChecking=no $DOCS_SERVER_USER_DEV@$DOCS_SERVER_IP_DEV "echo $CI_REGISTRY_PASSWORD | sudo docker login -u "$CI_REGISTRY_USER" --password-stdin $CI_REGISTRY"
+    - ssh -p 22122 -i $DOCS_ID_RSA_DEV -o StrictHostKeyChecking=no $DOCS_SERVER_USER_DEV@$DOCS_SERVER_IP_DEV "cd /home/ubuntu/$CI_COMMIT_REF_NAME && sudo docker-compose pull frontend_web_server && sudo docker-compose stop frontend_web_server  && sudo docker-compose rm -f ; sudo docker-compose up -d"
+  after_script:
+    - echo "Rerun cache commands"
+
+  environment:
+    name: development
+    url: http://$DOCS_SERVER_IP_DEV

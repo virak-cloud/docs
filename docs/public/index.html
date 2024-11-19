@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Redirect</title>
+    <script>
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+
+        function setCookie(name, value, days) {
+            const date = new Date();
+            date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+            document.cookie = `${name}=${value};path=/;expires=${date.toUTCString()};SameSite=Lax`;
+        }
+
+        async function detectAndRedirect() {
+            try {
+                // Check if a userLang cookie already exists
+                const userLang = getCookie('userLang');
+                if (userLang) {
+                    // Redirect based on saved language preference
+                    window.location.href = `/docs/${userLang}/guides/`;
+                    return;
+                }
+
+                // Use GeoIP API to detect location
+                const response = await fetch('https://ipapi.co/json/');
+                const data = await response.json();
+                const country = data.country; // e.g., "IR" for Iran
+                
+                // Determine language based on location or browser language
+                let lang = 'en'; // Default language
+                if (country === "IR") {
+                    lang = 'fa'; // Set Farsi for Iran
+                } else {
+                    const browserLang = navigator.language || navigator.userLanguage;
+                    lang = browserLang.startsWith('fa') ? 'fa' : 'en';
+                }
+
+                // Save the language in a cookie
+                setCookie('userLang', lang, 365); // Save for 1 year
+                
+                // Redirect to the appropriate language
+                window.location.href = `/docs/${lang}/guides/`;
+            } catch (error) {
+                console.error("Error detecting location or language:", error);
+                // Default to English if there's an error
+                window.location.href = `/docs/en/guides/`;
+            }
+        }
+
+        // Run the redirection logic on page load
+        window.onload = detectAndRedirect;
+    </script>
+</head>
+<body>
+    <h1>Redirecting...</h1>
+</body>
+</html>
