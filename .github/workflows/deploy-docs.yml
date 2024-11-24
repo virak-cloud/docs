@@ -36,7 +36,7 @@ jobs:
           fetch-depth: 0 # Not needed if lastUpdated is not enabled
       - name: Remove comments from JavaScript files
         run: |
-          find . -type f -name "*.js" -exec sed -i.bak \
+          find . -type f -name "*.ts" -exec sed -i.bak \
           -e 's://.*$::g' \
           -e '/\/\*/,/\*\//d' {} \;
           find . -type f -name "*.bak" -exec rm {} \;
