@@ -1,75 +1,67 @@
-# Sample workflow for building and deploying a VitePress site to GitHub Pages
-#
-name: Deploy VitePress site to Pages
+# Workflow to build and deploy a VitePress site to GitHub Pages
+name: Deploy VitePress Site to GitHub Pages
 
 on:
-  # Runs on pushes targeting the `main` branch. Change this to `master` if you're
-  # using the `master` branch as the default branch.
+  # Trigger on push to the main or dev branches
   push:
-    branches: [main,dev]
+    branches: [main, dev]
 
-  # Allows you to run this workflow manually from the Actions tab
+  # Allow manual workflow dispatch from the Actions tab
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+# Limit concurrent deployments to avoid conflicts
 concurrency:
-  group: pages
+  group: deploy-pages
   cancel-in-progress: false
 
 jobs:
   build:
     env:
-      VITE_SITEURL: ${{ secrets.VITE_SITEURL}}
-      VITE_COMMENT_URL: ${{ secrets.VITE_COMMENT_URL}}
+      VITE_SITEURL: ${{ secrets.VITE_SITEURL }}
+      VITE_COMMENT_URL: ${{ secrets.VITE_COMMENT_URL }}
     runs-on: ubuntu-latest
-    steps:
-      - name: Remove Comments from Code Files
-        run: |
-           # Remove comments from JavaScript/TypeScript files as an example
-           find ./src -type f -name "*.js" -exec sed -i '/^\s*\/\//d' {} +
-           find ./src -type f -name "*.js" -exec sed -i '/\/\*/,/\*\//d' {} +
 
-      - name: Checkout
+    steps:
+      - name: Checkout Code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Not needed if lastUpdated is not enabled
-      # - uses: pnpm/action-setup@v3 # Uncomment this block if you're using pnpm
-      #   with:
-      #     version: 9 # Not needed if you've set "packageManager" in package.json
-      # - uses: oven-sh/setup-bun@v1 # Uncomment this if you're using Bun
-      - name: Setup Node
+          fetch-depth: 0
+
+      - name: Remove Comments from Code Files
+        run: |
+          # Remove single-line and multi-line comments in JavaScript/TypeScript files
+          find ./src -type f -name "*.js" -exec sed -i '/^\s*\/\//d' {} +
+          find ./src -type f -name "*.js" -exec sed -i '/\/\*/,/\*\//d' {} +
+
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          #cache: npm # or pnpm / yarn
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-      - name: Install dependencies
-        run: npm install # or pnpm install / yarn install / bun install
-      - name: Build with VitePress
-        run: npm run docs:build # or pnpm docs:build / yarn docs:build / bun run docs:build
-      - name: Upload artifact
+          cache: npm
+
+      - name: Install Dependencies
+        run: npm ci # Faster installation with a clean state
+
+      - name: Build VitePress Site
+        run: npm run docs:build
+
+      - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs/.vitepress/dist
-      
-        
 
-  # Deployment job
   deploy:
+    needs: build
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
     runs-on: ubuntu-latest
-    name: Deploy
+
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
