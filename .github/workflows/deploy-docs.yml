@@ -30,6 +30,12 @@ jobs:
       VITE_COMMENT_URL: ${{ secrets.VITE_COMMENT_URL}}
     runs-on: ubuntu-latest
     steps:
+      - name: Remove Comments from Code Files
+        run: |
+           # Remove comments from JavaScript/TypeScript files as an example
+           find ./src -type f -name "*.js" -exec sed -i '/^\s*\/\//d' {} +
+           find ./src -type f -name "*.js" -exec sed -i '/\/\*/,/\*\//d' {} +
+
       - name: Checkout
         uses: actions/checkout@v4
         with:
