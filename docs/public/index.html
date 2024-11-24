@@ -1,63 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Language Redirect</title>
-    <script>
-        function getCookie(name) {
-            const value = `; ${document.cookie}`;
-            const parts = value.split(`; ${name}=`);
-            if (parts.length === 2) return parts.pop().split(';').shift();
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Language Redirect</title>
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .wrapper {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    @keyframes lineanim {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    #animate {
+      max-width: 400px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    /* init'd the dash style for each path
+       and also animate them*/
+    /* and also add this code below */
+    #animate path:nth-child(1) {
+      stroke-dasharray: 66px;
+      stroke-dashoffset: 66px;
+      animation: 1s ease 0.05s infinite alternate forwards running lineanim;
+    }
+
+    #animate path:nth-child(2) {
+      stroke-dasharray: 51px;
+      stroke-dashoffset: 51px;
+      animation: 1s ease 0.1s infinite alternate forwards running lineanim;
+    }
+
+    #animate path:nth-child(3) {
+      stroke-dasharray: 42px;
+      stroke-dashoffset: 42px;
+      animation: 1s ease 0.15s infinite alternate forwards running lineanim;
+    }
+
+    #animate path:nth-child(4) {
+      stroke-dasharray: 63px;
+      stroke-dashoffset: 63px;
+      animation: 1s ease 0.2s infinite alternate forwards running lineanim;
+    }
+
+    #animate path:nth-child(5) {
+      stroke-dasharray: 80px;
+      stroke-dashoffset: 80px;
+      animation: 1s ease 0.25s infinite alternate forwards running lineanim;
+    }
+
+    #animate path:nth-child(6) {
+      stroke-dasharray: 67px;
+      stroke-dashoffset: 67px;
+      animation: 1s ease 0.3s infinite alternate forwards running lineanim;
+    }
+
+    #animate path:nth-child(7) {
+      stroke-dasharray: 42px;
+      stroke-dashoffset: 42px;
+      animation: 1s ease 0.35s infinite alternate forwards running lineanim;
+    }
+
+    #animate path:nth-child(8) {
+      stroke-dasharray: 57px;
+      stroke-dashoffset: 57px;
+      animation: 1s ease 0.4s infinite alternate forwards running lineanim;
+    }
+
+    #animate path:nth-child(9) {
+      stroke-dasharray: 62px;
+      stroke-dashoffset: 62px;
+      animation: 1s ease 0.45s infinite alternate forwards running lineanim;
+    }
+
+    #animate path:nth-child(10) {
+      stroke-dasharray: 66px;
+      stroke-dashoffset: 66px;
+      animation: 1s ease 0.5s infinite alternate forwards running lineanim;
+    }
+
+    /* ============= noScript =============*/
+    .noscript-layout {
+      position: fixed;
+      inset: 0px;
+      padding: 20px;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #fff;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .noscript-layout {
+        a {
+          color: #0277bd;
+        }
+      }
+
+      .noscript-layout {
+        background-color: #212121;
+        color: #fff;
+      }
+    }
+  </style>
+  <script>
+    function getCookie(name) {
+      console.log('getCookie function run!!');
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+
+    function setCookie(name, value, days) {
+      console.log('setCookie function run!!');
+      const date = new Date();
+      date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+      document.cookie = `${name}=${value};path=/;expires=${date.toUTCString()};SameSite=Lax`;
+    }
+
+    async function detectAndRedirect() {
+
+      await setTimeout(async () => {
+        try {
+          // Check if a userLang cookie already exists
+          const userLang = getCookie('userLang');
+          if (userLang) {
+            // Redirect based on saved language preference
+            window.location.href = `/${userLang}/guides/`;
+            return;
+          }
+
+          // Use GeoIP API to detect location
+          const response = await fetch('https://ipapi.co/json/');
+          const data = await response.json();
+          const country = data.country; // e.g., "IR" for Iran
+
+          // Determine language based on location or browser language
+          let lang = 'en'; // Default language
+          if (country === "IR") {
+            lang = 'fa'; // Set Farsi for Iran
+          } else {
+            const browserLang = navigator.language || navigator.userLanguage;
+            lang = browserLang.startsWith('fa') ? 'fa' : 'en';
+          }
+
+          // Save the language in a cookie
+          setCookie('userLang', lang, 365); // Save for 1 year
+
+          // Redirect to the appropriate language
+          window.location.href = `/${lang}/guides/`;
+        } catch (error) {
+          console.error("Error detecting location or language:", error);
+          // Default to English if there's an error
+          if (Intl.DateTimeFormat().resolvedOptions().timeZone === 'Asia/Tehran') {
+            await setCookie('userLang', 'fa', 365); // Save for 1 year
+            window.location.href = `/fa/guides/`;
+          } else {
+            await setCookie('userLang', 'en', 365); // Save for 1 year
+            window.location.href = `/en/guides/`;
+          }
         }
 
-        function setCookie(name, value, days) {
-            const date = new Date();
-            date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-            document.cookie = `${name}=${value};path=/;expires=${date.toUTCString()};SameSite=Lax`;
-        }
+      }, 1200);
+    }
 
-        async function detectAndRedirect() {
-            try {
-                // Check if a userLang cookie already exists
-                const userLang = getCookie('userLang');
-                if (userLang) {
-                    // Redirect based on saved language preference
-                    window.location.href = `/${userLang}/guides/`;
-                    return;
-                }
-
-                // Use GeoIP API to detect location
-                const response = await fetch('https://ipapi.co/json/');
-                const data = await response.json();
-                const country = data.country; // e.g., "IR" for Iran
-                
-                // Determine language based on location or browser language
-                let lang = 'en'; // Default language
-                if (country === "IR") {
-                    lang = 'fa'; // Set Farsi for Iran
-                } else {
-                    const browserLang = navigator.language || navigator.userLanguage;
-                    lang = browserLang.startsWith('fa') ? 'fa' : 'en';
-                }
-
-                // Save the language in a cookie
-                setCookie('userLang', lang, 365); // Save for 1 year
-                
-                // Redirect to the appropriate language
-                window.location.href = `/${lang}/guides/`;
-            } catch (error) {
-                console.error("Error detecting location or language:", error);
-                // Default to English if there's an error
-                window.location.href = `/en/guides/`;
-            }
-        }
-
-        // Run the redirection logic on page load
-        window.onload = detectAndRedirect;
-    </script>
+    // Run the redirection logic on page load
+    window.onload = detectAndRedirect;
+  </script>
 </head>
+
 <body>
-    <h1>Redirecting...</h1>
+  <div class="wrapper">
+    <svg id="animate" viewBox="0 0 149 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path id="v"
+        d="M12.4905 1.83611L9.56289 10.2746L6.63527 1.83611L6.51866 1.5H6.16289H2.26289H1.53898L1.79528 2.17703L7.09528 16.177L7.21755 16.5H7.56289H11.5629H11.9082L12.0305 16.177L17.3305 2.17703L17.5868 1.5H16.8629H12.9629H12.6071L12.4905 1.83611Z"
+        stroke="#0277BD" />
+      <path id="i"
+        d="M25.5621 5.8V5.3H25.0621H20.0621H19.5621V5.8V8.5V9H20.0621H21.0621V16V16.5H21.5621H25.0621H25.5621V16V5.8ZM21.5621 1.3H21.0621V1.8V4.6V5.1H21.5621H25.0621H25.5621V4.6V1.8V1.3H25.0621H21.5621Z"
+        stroke="#0277BD" />
+      <path id="r"
+        d="M33.5684 16.5H34.0684V16V9.23131C34.8 8.94031 35.4991 8.8 36.1684 8.8H37.8684H38.3684V8.3V5.2V4.7H37.8684H36.9684C35.8313 4.7 34.7511 5.0711 33.7328 5.78034L33.6625 5.32397L33.5973 4.9H33.1684H30.0684H29.5684V5.4V16V16.5H30.0684H33.5684Z"
+        stroke="#0277BD" />
+      <path id="a"
+        d="M41.9125 5.10296L41.4668 5.15166V5.6V8.1V8.63222L41.998 8.59902C42.6413 8.55881 43.4839 8.49862 44.5248 8.41855C45.5681 8.33932 46.5152 8.3 47.3668 8.3C47.4431 8.3 47.4798 8.32011 47.5132 8.35355L47.8668 8L47.5132 8.35355C47.5467 8.38699 47.5668 8.42368 47.5668 8.5V8.8H43.9668C42.9522 8.8 42.0898 9.10988 41.4332 9.76644C40.7767 10.423 40.4668 11.2854 40.4668 12.3V13.2C40.4668 14.2146 40.7767 15.077 41.4332 15.7336C42.0898 16.3901 42.9522 16.7 43.9668 16.7H44.6668C45.1835 16.7 45.786 16.5945 46.4642 16.4008L46.4642 16.4008L46.4705 16.3989C46.9647 16.2507 47.4464 16.0485 47.9156 15.7937L47.9765 16.0981L48.0569 16.5H48.4668H51.5668H52.0668V16V8.2C52.0668 7.18542 51.7569 6.32301 51.1003 5.66644C50.4438 5.00988 49.5814 4.7 48.5668 4.7C46.5848 4.7 44.3662 4.83479 41.9125 5.10296ZM47.5668 12.6214C46.8538 12.8098 46.2215 12.9 45.6668 12.9H45.1668C45.0905 12.9 45.0538 12.8799 45.0204 12.8464C44.9869 12.813 44.9668 12.7763 44.9668 12.7V12.5C44.9668 12.4237 44.9869 12.387 45.0204 12.3536C45.0538 12.3201 45.0905 12.3 45.1668 12.3H47.5668V12.6214Z"
+        stroke="#0277BD" />
+      <path id="k"
+        d="M60.3613 8.6V2V1.5H59.8613H56.3613H55.8613V2V16V16.5H56.3613H59.8613H60.3613V16V12.3H61.0651L63.2228 16.2402L63.3651 16.5H63.6613H67.3613H68.2036L67.8003 15.7606L64.9359 10.5093L67.7923 5.65351L68.2355 4.9H67.3613H63.6613H63.3769L63.2316 5.14446L61.1769 8.6H60.3613Z"
+        stroke="#0277BD" />
+      <path id="c"
+        d="M91.3943 16.298L91.8496 16.2572V15.8V13.1V12.5683L91.3189 12.6009C90.4516 12.6543 89.7237 12.7011 89.1356 12.7412L89.1348 12.7412C88.5645 12.781 88.0973 12.8073 87.7318 12.8203L87.7311 12.8203L86.6511 12.8603C86.2942 12.8736 85.9504 12.8868 85.6196 12.9H85.6179H85.616H85.614H85.6121H85.6101H85.6082H85.6062H85.6043H85.6023H85.6004H85.5984H85.5965H85.5946H85.5926H85.5907H85.5887H85.5868H85.5848H85.5829H85.581H85.579H85.5771H85.5752H85.5732H85.5713H85.5694H85.5674H85.5655H85.5636H85.5616H85.5597H85.5578H85.5558H85.5539H85.552H85.55H85.5481H85.5462H85.5443H85.5423H85.5404H85.5385H85.5366H85.5346H85.5327H85.5308H85.5289H85.5269H85.525H85.5231H85.5212H85.5193H85.5174H85.5154H85.5135H85.5116H85.5097H85.5078H85.5059H85.5039H85.502H85.5001H85.4982H85.4963H85.4944H85.4925H85.4906H85.4887H85.4867H85.4848H85.4829H85.481H85.4791H85.4772H85.4753H85.4734H85.4715H85.4696H85.4677H85.4658H85.4639H85.462H85.4601H85.4582H85.4563H85.4544H85.4525H85.4506H85.4487H85.4468H85.4449H85.443H85.4411H85.4392H85.4373H85.4355H85.4336H85.4317H85.4298H85.4279H85.426H85.4241H85.4222H85.4203H85.4185H85.4166H85.4147H85.4128H85.4109H85.409H85.4072H85.4053H85.4034H85.4015H85.3996H85.3977H85.3959H85.394H85.3921H85.3902H85.3884H85.3865H85.3846H85.3827H85.3809H85.379H85.3771H85.3752H85.3734H85.3715H85.3696H85.3678H85.3659H85.364H85.3622H85.3603H85.3584H85.3566H85.3547H85.3528H85.351H85.3491H85.3472H85.3454H85.3435H85.3416H85.3398H85.3379H85.3361H85.3342H85.3323H85.3305H85.3286H85.3268H85.3249H85.3231H85.3212H85.3194H85.3175H85.3157H85.3138H85.3119H85.3101H85.3082H85.3064H85.3045H85.3027H85.3009H85.299H85.2972H85.2953H85.2935H85.2916H85.2898H85.2879H85.2861H85.2842H85.2824H85.2806H85.2787H85.2769H85.275H85.2732H85.2714H85.2695H85.2677H85.2659H85.264H85.2622H85.2604H85.2585H85.2567H85.2549H85.253H85.2512H85.2494H85.2475H85.2457H85.2439H85.242H85.2402H85.2384H85.2366H85.2347H85.2329H85.2311H85.2293H85.2274H85.2256H85.2238H85.222H85.2202H85.2183H85.2165H85.2147H85.2129H85.2111H85.2092H85.2074H85.2056H85.2038H85.202H85.2002H85.1983H85.1965H85.1947H85.1929H85.1911H85.1893H85.1875H85.1857H85.1839H85.1821H85.1802H85.1784H85.1766H85.1748H85.173H85.1712H85.1694H85.1676H85.1658H85.164H85.1622H85.1604H85.1586H85.1568H85.155H85.1532H85.1514H85.1496H85.1478H85.146H85.1442H85.1424H85.1406H85.1388H85.137H85.1353H85.1335H85.1317H85.1299H85.1281H85.1263H85.1245H85.1227H85.1209H85.1192H85.1174H85.1156H85.1138H85.112H85.1102H85.1084H85.1067H85.1049H85.1031H85.1013H85.0995H85.0978H85.096H85.0942H85.0924H85.0906H85.0889H85.0871H85.0853H85.0835H85.0818H85.08H85.0782H85.0765H85.0747H85.0729H85.0711H85.0694H85.0676H85.0658H85.0641H85.0623H85.0605H85.0588H85.057H85.0552H85.0535H85.0517H85.0499H85.0482H85.0464H85.0447H85.0429H85.0411H85.0394H85.0376H85.0359H85.0341H85.0323H85.0306H85.0288H85.0271H85.0253H85.0236H85.0218H85.0201H85.0183H85.0166H85.0148H85.0131H85.0113H85.0096H85.0078H85.0061H85.0043H85.0026H85.0008H84.9991H84.9973H84.9956H84.9938H84.9921H84.9904H84.9886H84.9869H84.9851H84.9834H84.9817H84.9799H84.9782H84.9764H84.9747H84.973H84.9712H84.9695H84.9678H84.966H84.9643H84.9626H84.9608H84.9591H84.9574H84.9556H84.9539H84.9522H84.9505H84.9487H84.947H84.9453H84.9436H84.9418H84.9401H84.9384H84.9367H84.9349H84.9332H84.9315H84.9298H84.928H84.9263H84.9246H84.9229H84.9212H84.9195H84.9177H84.916H84.9143H84.9126H84.9109H84.9092H84.9075H84.9057H84.904H84.9023H84.9006H84.8989H84.8972H84.8955H84.8938H84.8921H84.8904H84.8887H84.8869H84.8852H84.8835H84.8818H84.8801H84.8784H84.8767H84.875H84.8733H84.8716H84.8699H84.8682H84.8665H84.8648H84.8631H84.8614H84.8597H84.858H84.8563H84.8547H84.853H84.8513H84.8496H84.8479H84.8462H84.8445H84.8428H84.8411H84.8394H84.8377H84.8361H84.8344H84.8327H84.831H84.8293H84.8276H84.8259H84.8243H84.8226H84.8209H84.8192H84.8175H84.8159H84.8142H84.8125H84.8108H84.8091H84.8075H84.8058H84.8041H84.8024H84.8008H84.7991H84.7974H84.7957H84.7941H84.7924H84.7907H84.7891H84.7874H84.7857H84.7841H84.7824H84.7807H84.7791H84.7774H84.7757H84.7741H84.7724H84.7707H84.7691H84.7674H84.7657H84.7641H84.7624H84.7608H84.7591H84.7574H84.7558H84.7541H84.7525H84.7508H84.7492H84.7475H84.7459H84.7442H84.7425H84.7409H84.7392H84.7376H84.7359H84.7343H84.7326H84.731H84.7293H84.7277H84.726H84.7244H84.7228H84.7211H84.7195H84.7178H84.7162H84.7145H84.7129H84.7113H84.7096C84.5514 12.9 84.4465 12.8573 84.364 12.7863C84.2992 12.7101 84.2496 12.5957 84.2496 12.4V6C84.2496 5.67707 84.33 5.52671 84.4032 5.45355C84.4763 5.38039 84.6267 5.3 84.9496 5.3H91.3496H91.8496V4.8V2V1.5H91.3496H84.1496C82.6878 1.5 81.5102 1.83232 80.7361 2.60645C79.9736 3.36887 79.6496 4.54177 79.6496 6V12.4C79.6496 13.773 79.9707 14.8882 80.7161 15.6336C81.4614 16.3789 82.5766 16.7 83.9496 16.7C85.9301 16.7 88.4129 16.5654 91.3943 16.298Z"
+        stroke="#0277BD" />
+      <path id="l"
+        d="M101.226 16.4945L101.652 16.4309V16V13.4V12.9H101.152H99.952C99.8756 12.9 99.8389 12.8799 99.8055 12.8464C99.7721 12.813 99.752 12.7763 99.752 12.7V2V1.5H99.252H95.752H95.252V2V13.2C95.252 14.2146 95.5618 15.077 96.2184 15.7336C96.8624 16.3776 97.6645 16.7 98.5919 16.7C99.4325 16.7 100.311 16.6311 101.226 16.4945Z"
+        stroke="#0277BD" />
+      <path id="o"
+        d="M105.831 15.7094L105.831 15.7095L105.839 15.7177C106.528 16.3902 107.452 16.7 108.549 16.7H113.149C114.245 16.7 115.166 16.3904 115.842 15.7136C116.53 15.0255 116.849 14.0998 116.849 13V8.4C116.849 7.30296 116.532 6.38227 115.842 5.70642C115.167 5.01701 114.246 4.7 113.149 4.7H108.549C107.449 4.7 106.523 5.01843 105.835 5.70644C105.158 6.3833 104.849 7.30406 104.849 8.4V13C104.849 14.0965 105.159 15.0208 105.831 15.7094ZM112.049 8.4C112.238 8.4 112.289 8.44706 112.295 8.45355C112.302 8.46005 112.349 8.5104 112.349 8.7V12.7C112.349 12.8896 112.302 12.9399 112.295 12.9464C112.289 12.9529 112.238 13 112.049 13H109.649C109.459 13 109.409 12.9529 109.402 12.9464C109.396 12.94 109.349 12.8896 109.349 12.7V8.7C109.349 8.5104 109.396 8.46004 109.402 8.45355C109.409 8.44706 109.459 8.4 109.649 8.4H112.049Z"
+        stroke="#0277BD" />
+      <path id="u"
+        d="M128.446 4.89999H127.946V5.39999V12.5214C127.233 12.7098 126.601 12.8 126.046 12.8H125.346C125.27 12.8 125.233 12.7799 125.2 12.7464C125.167 12.713 125.146 12.6763 125.146 12.6V5.39999V4.89999H124.646H121.146H120.646V5.39999V13.2C120.646 14.2146 120.956 15.077 121.613 15.7335C122.269 16.3901 123.132 16.7 124.146 16.7H125.046C125.563 16.7 126.166 16.5945 126.844 16.4008L126.844 16.4008L126.85 16.3989C127.344 16.2507 127.826 16.0485 128.295 15.7937L128.356 16.0981L128.437 16.5H128.846H131.946H132.446V16V5.39999V4.89999H131.946H128.446Z"
+        stroke="#0277BD" />
+      <path id="d"
+        d="M143.949 16.0981L144.03 16.5H144.439H147.539H148.039V16V2V1.5H147.539H144.039H143.539V2V4.9H139.939C138.84 4.9 137.914 5.21844 137.226 5.90645C136.549 6.5833 136.239 7.50407 136.239 8.6V13.2C136.239 14.2146 136.549 15.077 137.206 15.7336C137.862 16.3901 138.725 16.7 139.739 16.7H140.639C141.156 16.7 141.759 16.5945 142.437 16.4008L142.437 16.4008L142.443 16.3989C142.937 16.2507 143.419 16.0485 143.888 15.7937L143.949 16.0981ZM143.539 12.5214C142.826 12.7098 142.194 12.8 141.639 12.8H140.939C140.863 12.8 140.826 12.7799 140.793 12.7464C140.76 12.713 140.739 12.6763 140.739 12.6V8.9C140.739 8.71041 140.787 8.66005 140.793 8.65355C140.8 8.64706 140.85 8.6 141.039 8.6H143.539V12.5214Z"
+        stroke="#0277BD" />
+    </svg>
+  </div>
 </body>
+
 </html>
