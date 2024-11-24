@@ -45,11 +45,11 @@
                 setCookie('userLang', lang, 365); // Save for 1 year
                 
                 // Redirect to the appropriate language
-                window.location.href = `/docs/${lang}/guides/`;
+                window.location.href = `/${lang}/guides/`;
             } catch (error) {
                 console.error("Error detecting location or language:", error);
                 // Default to English if there's an error
-                window.location.href = `/docs/en/guides/`;
+                window.location.href = `/en/guides/`;
             }
         }
 
