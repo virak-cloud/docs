@@ -2,7 +2,6 @@
 import { useData } from 'vitepress'
 
 const { lang } = useData()
-// const route = useRoute()
 
 </script>
 <template>

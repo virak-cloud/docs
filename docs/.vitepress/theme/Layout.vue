@@ -9,17 +9,11 @@ import mediumZoom from 'medium-zoom';
 
 
 const { isDark } = useData()
-
-// todo: check in production and if dont work for load comment after content remove this
 const contentLoaded = ref(false);
-// const contentContainer = ref<HTMLElement|null>(null)
-
 const route = useRoute()
-
 const weAreInHome = computed(()=>{
   return ['/fa/guides/' , '/en/guides/'].includes(route.path)
 })
-
 const applyZoom = () => {
   mediumZoom('[data-zoomable]', {
     background: 'rgba(0,0,0, 0.8)',
@@ -29,11 +23,8 @@ const applyZoom = () => {
 
 onMounted(async () => {
   applyZoom();
-
-  // todo: check in production and if dont work for load comment after content remove this two line
   await nextTick();
   contentLoaded.value = true;
-  // contentContainer.value = document.querySelector('#VPContent .content-container')
 });
 
 watch([() => isDark.value, () => route.path], () => {
@@ -76,6 +67,7 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
 })
 
 </script>
+
 <template>
   <DefaultTheme.Layout>
     <template #not-found>
@@ -86,6 +78,7 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
     <CommentBox />
   </Teleport>
 </template>
+
 <style>
 #remark42 {
   margin-top: 30px;
