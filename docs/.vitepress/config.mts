@@ -11,23 +11,13 @@ dotenv.config({
 });
 
 
-// console.log('import.meta.env.VITE_API_URL:', import.meta?.env.VITE_API_URL);
 console.log('envs:', process.env);
 
 const github_link_url = 'https://github.com/virak-cloud/docs/edit/main/docs/:path'
 
 export default defineConfig({
-  // shared properties and other top-level stuff...
-  // rewrites: {
-    // 'docs/fa': 'docs/fa/guides',
-    // 'docs/en': 'docs/en/guides',
-  // 'docs/:lang/:slug*': ':lang/:slug*'
-  // },
   lang: 'fa-IR',
   cleanUrls: true,
-  // title: "Virak Cloud",
-  // description: "",
-  // base: '/docs/',
   sitemap: {
     hostname: process.env.VITE_SITEURL ?? ''
   },
@@ -42,13 +32,6 @@ export default defineConfig({
     ],
     ['meta', { name: 'robots', content: 'noindex, nofollow' }],
   ],
-  // dir : '/',
-  // outDir : './dist',
-  // cacheDir : './',
-  // assetsDir : '../../assets',
-  // srcDir : 'src',
-  // vue: {
-  // },
   vite: {
     css: {
       postcss: {
@@ -58,24 +41,6 @@ export default defineConfig({
       }
     }
   },
-  // transformHead({ assets }) {
-  //   // adjust the regex accordingly to match your font
-  //   const myFontFile = assets.find(file => /IRANSansXV\.\w+\.woff2/)
-  //   if (myFontFile) {
-  //     return [
-  //       [
-  //         'link',
-  //         {
-  //           rel: 'preload',
-  //           href: myFontFile,
-  //           as: 'font',
-  //           type: 'font/woff2',
-  //           crossorigin: ''
-  //         }
-  //       ]
-  //     ]
-  //   }
-  // },
   markdown: {
     // https://github.com/markdown-it/markdown-it
     image: {
@@ -90,7 +55,7 @@ export default defineConfig({
       provider: 'local',
       options: {
         locales: {
-          fa: { // make this `root` if you want to translate the default locale
+          fa: {
             translations: {
               button: {
                 buttonText: 'جستجو',
@@ -112,12 +77,6 @@ export default defineConfig({
         }
       }
     },
-    // https://vitepress.dev/reference/default-theme-config
-    // nav: [
-    //   { text: 'Home', link: '/' },
-    //   { text: 'Examples', link: '/markdown-examples' }
-    // ],
-
     socialLinks: [
       {
         icon: {
@@ -164,7 +123,6 @@ export default defineConfig({
       dir: 'rtl',
       title: 'ابر ویراک',
       description: 'ابر ویراک: پیشگام در ارائه خدمات رایانش ابری',
-      // head: [],
       themeConfig: {
         siteTitle: 'مستندات ابر ویراک',
         logoLink: '/fa/guides/index',
@@ -312,16 +270,6 @@ export default defineConfig({
 
             ],
           }],
-        // footer: {
-        //   copyright: 'Copyright © 2020-present <a href="https://virakcloud.com">Virak Cloud ☁️</a>'
-        // },
-        // notFound: {
-        //   title: 'صفحه مورد نظر پیدا نشد',
-        //   quote: "صفحه‌ای که به دنبال آن هستید وجود ندارد یا جابجا شده است.",
-        //   linkLabel: 'برو به خانه', // aria-label
-        //   linkText: 'رفتن به خانه',
-        //   code: '۴۰۴'
-        // }
       },
     },
     en: {
@@ -331,7 +279,6 @@ export default defineConfig({
       link: '/en',
       title: 'Virak Cloud',
       description: 'Virak Cloud: A Pioneer in Cloud Computing Services',
-      // head: [],
       themeConfig: {
         siteTitle: 'Virak Cloud Documents',
         logoLink: '/en/guides/index',
@@ -339,7 +286,6 @@ export default defineConfig({
           pattern: github_link_url,
           text: 'Edit this page on GitHub'
         },
-        // nav: [],
         sidebar: [
           {
             text: 'User Guide',
@@ -464,12 +410,6 @@ export default defineConfig({
             ]
           }
         ],
-        // notFound: {
-        //   quote: "The page you are looking for does not exist or has been moved.",
-        // }
-        // footer: {
-        //   copyright: 'Copyright © 2020-present <a href="https://virakcloud.com/">Virak Cloud ☁️</a>'
-        // }
       }
     }
   }
