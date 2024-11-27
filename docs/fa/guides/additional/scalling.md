@@ -1,85 +1,85 @@
 
-# Scaling Guide for Virtual Machines and Kubernetes Clusters in Virak Panel
+# راهنمای مقیاس‌پذیری ماشین‌های مجازی و کلاسترهای کوبرنتیز در پنل ویراک
 
-The Virak Panel offers advanced scaling capabilities, enabling you to manage server resources flexibly and efficiently according to your business needs. Below is a comprehensive guide to these features.
+پنل ویراک با فراهم کردن امکانات مقیاس‌پذیری پیشرفته، شما را قادر می‌سازد تا منابع سرورها و سرویس‌های خود را متناسب با نیازهای کسب‌وکار، به سادگی و با انعطاف‌پذیری مدیریت کنید. در ادامه، راهنمای جامع این قابلیت‌ها ارائه شده است.
 
-## Scaling Virtual Machines (VMs)
+## مقیاس‌پذیری در ماشین‌های مجازی (VMs)
 
-### Vertical Scaling
+### مقیاس‌پذیری عمودی (Vertical Scaling)
 
-- **In Live Mode:** 
-  - **Scale Up:** Increase resources like CPU and RAM without shutting down the machine.
-  - **Scale Down:** Not possible. To reduce resources, the machine must be stopped.
+- **در حالت روشن (Live):**
+  - **افزایش منابع (Scale Up):** بدون نیاز به خاموش کردن ماشین، می‌توانید منابعی مانند CPU و RAM را افزایش دهید.
+  - **کاهش منابع (Scale Down):** برای کاهش منابع، باید ماشین را خاموش کنید.
 
-- **In Stopped Mode:** 
-  - You can fully increase or decrease resources.
+- **در حالت خاموش (Stopped):**
+  - امکان افزایش و کاهش منابع به طور کامل فراهم است.
 
-### Horizontal Scaling
-By creating instance groups and utilizing a Load Balancer, you can increase the number of virtual machines and distribute traffic evenly.
+### مقیاس‌پذیری افقی (Horizontal Scaling)
+با ایجاد گروه‌های اینستنس و استفاده از لود بالانسر (Load Balancer)، می‌توانید تعداد ماشین‌های مجازی را افزایش داده و بار ترافیک را به طور مساوی توزیع کنید.
 
-## Scaling Kubernetes Clusters
+## مقیاس‌پذیری در کلاسترهای کوبرنتیز (Kubernetes Clusters)
 
-### Vertical Scaling
-- **In Live Mode:** 
-  Resource adjustments for cluster nodes are not possible.
-- **In Stopped Mode:** 
-  You can increase or decrease the resources for each node.
+### مقیاس‌پذیری عمودی (Vertical Scaling)
+- **در حالت روشن (Live):** 
+  امکان تغییر منابع نودهای کلاستر وجود ندارد.
+- **در حالت خاموش (Stopped):** 
+  می‌توانید منابع هر نود را افزایش یا کاهش دهید.
 
-### Horizontal Scaling
-- **In Live Mode:** 
-  Adjust the number of cluster nodes to meet capacity needs.
+### مقیاس‌پذیری افقی (Horizontal Scaling)
+- **در حالت روشن:** 
+  امکان افزایش یا کاهش تعداد نودهای کلاستر برای تنظیم ظرفیت بر اساس نیاز فراهم است.
 
-## Summary Table of Scaling in Virak Panel
+## جدول خلاصه مقیاس‌پذیری در پنل ویراک
 
-| Service Type      | Scaling Type       | In Live Mode                   | In Stopped Mode                 |
-|--------------------|--------------------|---------------------------------|----------------------------------|
-| Virtual Machines   | Vertical          | Scale Up (Scale Down not possible) | Full resource scaling available |
-|                    | Horizontal         | Adjust the number of machines  | Adjust the number of machines   |
-| Kubernetes Clusters| Vertical          | Not possible                   | Adjust node resources           |
-|                    | Horizontal         | Adjust the number of nodes     | Adjust the number of nodes      |
+| نوع سرویس         | نوع مقیاس‌پذیری      | در حالت روشن                       | در حالت خاموش                       |
+|--------------------|----------------------|-------------------------------------|-------------------------------------|
+| ماشین‌های مجازی    | عمودی (Vertical)    | افزایش منابع (کاهش امکان‌پذیر نیست) | افزایش و کاهش منابع                |
+|                    | افقی (Horizontal)   | افزایش و کاهش تعداد ماشین‌ها       | افزایش و کاهش تعداد ماشین‌ها       |
+| کلاسترهای کوبرنتیز | عمودی (Vertical)    | امکان‌پذیر نیست                    | افزایش و کاهش منابع نودها          |
+|                    | افقی (Horizontal)   | افزایش و کاهش تعداد نودها          | افزایش و کاهش تعداد نودها          |
 
-## Key Points for Decision-Making
+## نکات کلیدی برای تصمیم‌گیری
 
-- **Quickly Increase Resources Without Downtime:**
-  - Virtual Machines: Scale up resources in live mode.
-  - Kubernetes Clusters: Increase the number of nodes.
+- **افزایش سریع منابع بدون توقف سرویس:**
+  - در ماشین‌های مجازی می‌توانید منابع را در حالت روشن افزایش دهید.
+  - در کلاسترهای کوبرنتیز تعداد نودها قابل افزایش است.
 
-- **Reducing Resources or Major Changes:**
-  - Requires stopping the service for both virtual machines and clusters.
+- **کاهش منابع یا تغییرات بزرگ:**
+  - نیاز به توقف سرویس برای کاهش منابع در هر دو حالت وجود دارد.
 
-- **Load Distribution and High Availability:**
-  - Use horizontal scaling to increase the number of machines or nodes, distributing traffic efficiently.
+- **توزیع بار و افزایش دسترسی‌پذیری:**
+  - با مقیاس‌پذیری افقی، تعداد ماشین‌ها یا نودها را افزایش داده و بار ترافیک را توزیع کنید.
 
-## Practical Examples
+## مثال‌های کاربردی
 
-### Virtual Machines (VMs)
-- **Scaling Up in Live Mode:** Quickly increase CPU and RAM resources during traffic spikes.
-- **Scaling Down:** Reduce costs by stopping the machine and decreasing resources during low-traffic periods.
+### ماشین‌های مجازی (VMs)
+- **افزایش منابع در حالت روشن:** در صورت افزایش ترافیک وب‌سایت یا اپلیکیشن، منابع CPU و RAM را بدون توقف افزایش دهید.
+- **کاهش منابع:** در زمان کاهش ترافیک، ماشین را متوقف کرده و منابع را برای صرفه‌جویی در هزینه کاهش دهید.
 
-### Kubernetes Clusters
-- **Adding Nodes:** Increase the number of nodes in live mode to handle higher workloads.
-- **Changing Node Resources:** Stop the cluster to adjust resources for each node.
+### کلاسترهای کوبرنتیز
+- **افزایش تعداد نودها:** با افزایش بار کاری، تعداد نودها را در حالت روشن افزایش دهید.
+- **تغییر منابع نودها:** برای تغییر منابع هر نود، کلاستر را متوقف کرده و تنظیمات لازم را انجام دهید.
 
-## Best Practices for Efficient Use
+## راهنمایی برای استفاده بهینه
 
-1. **Resource Planning:** Manage resources based on traffic patterns and workloads.
-2. **Load Balancer Usage:** Distribute traffic among machines or nodes for improved performance and availability.
-3. **Continuous Monitoring:** Monitor server and cluster performance to identify scaling needs promptly.
+1. **برنامه‌ریزی منابع:** منابع خود را بر اساس الگوهای ترافیک و بار کاری مدیریت کنید.
+2. **استفاده از لود بالانسر:** با توزیع ترافیک میان ماشین‌ها یا نودها، کارایی و دسترسی‌پذیری را افزایش دهید.
+3. **نظارت مداوم:** با پایش عملکرد سرورها و کلاسترها، نیاز به تغییرات را به موقع تشخیص دهید.
 
-## FAQs
+## سوالات متداول
 
-1. **Can I decrease VM resources without stopping it?**
-   No, reducing VM resources requires stopping the machine.
+1. **آیا می‌توانم منابع ماشین مجازی را بدون توقف کاهش دهم؟**
+   خیر، برای کاهش منابع ماشین مجازی باید آن را متوقف کنید.
 
-2. **How can I add nodes to a Kubernetes cluster?**
-   In the Virak Panel, go to the cluster management section and adjust the node count in live mode.
+2. **چگونه می‌توانم تعداد نودهای کلاستر کوبرنتیز را افزایش دهم؟**
+   در بخش مدیریت کلاستر پنل ویراک، تعداد نودها را در حالت روشن تنظیم کنید.
 
-3. **Does adding nodes require additional configuration?**
-   No, the Virak Panel automatically integrates new nodes into the cluster.
+3. **آیا افزایش تعداد نودها نیاز به تنظیمات اضافی دارد؟**
+   خیر، پنل ویراک به طور خودکار نودهای جدید را به کلاستر اضافه می‌کند.
 
-## Contact Support
-For further assistance, contact the Virak support team. We are always ready to help.
+## تماس با پشتیبانی
+در صورت نیاز به راهنمایی بیشتر، با تیم پشتیبانی ویراک تماس بگیرید. ما همواره آماده کمک به شما هستیم.
 
 ---
 
-Virak Panel, empowering your business growth and scalability.
+پنل ویراک، همراه کسب‌وکار شما در مسیر رشد و توسعه.
