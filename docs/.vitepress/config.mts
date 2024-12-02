@@ -3,7 +3,7 @@ import rtlcss from 'rtlcss'
 import dotenv from 'dotenv';
 import path from 'path';
 
-// Manually load the correct .env file based on your build mode
+// Manually load the correct .env file based on your build mod
 dotenv.config({
   path: path.resolve(process.cwd(), process.env.BUILD_ENV === 'production'
     ? '.env.master'
