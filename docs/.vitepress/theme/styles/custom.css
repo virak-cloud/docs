@@ -1,0 +1,143 @@
+/**
+ * Customize
+ * -------------------------------------------------------------------------- */
+:root {
+  --vp-c-brand-1: #0077CC;
+  --vp-c-brand-2: #01579B;
+  --vp-button-brand-bg: #0077CC
+}
+
+* {
+  scrollbar-width: thin;
+}
+
+#app {
+  position: relative;
+  z-index: 0;
+}
+
+.medium-zoom-overlay {
+  z-index: 1;
+}
+
+.medium-zoom-image {
+  z-index: 2;
+}
+
+/* Define the custom font for RTL */
+@font-face {
+  font-family: 'IranSans';
+  src: url('/fonts/iran-sans/IRANSansXV.woff2') format('woff2'),
+    url('/fonts/iran-sans/IRANSansXV.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Apply the custom font for RTL (Farsi) content only */
+:where([dir="rtl"]) {
+  --vp-font-family-base: 'IranSans', sans-serif !important;
+  font-family: var(--vp-font-family-base) !important;
+
+  /* ========= start 404 page ========= */
+  .NotFound .title {
+    letter-spacing: 0;
+  }
+
+  /* ========= end 404 page ========= */
+
+
+  .back-button {
+    transform: scaleX(-1);
+  }
+
+  .vpi-chevron-right.icon {
+    transform: scaleX(-1);
+  }
+
+  #VPSidebarNav .VPSidebarItem.collapsed .caret .caret-icon {
+    transform: scaleX(-1);
+  }
+
+  .search-input {
+    padding: 6px 12px;
+    font-size: inherit;
+    width: 100%;
+    font-family: 'IranSans', sans-serif !important;
+  }
+}
+
+/*rtl:ignore*/
+:where([dir="ltr"]) {
+  .VPHero.has-image .container {
+    text-align: left !important;
+  }
+
+  .menu {
+    right: 0;
+    left: unset !important;
+  }
+
+  .logo {
+    margin-right: 8px !important;
+    margin-left: unset !important;
+    height: 35px !important;
+  }
+
+  .title .VPNavBarTitle .title span {
+    font-size: 15px;
+  }
+
+  .DocSearch-Button .DocSearch-Button-Placeholder {
+    padding: 0 16px 0 16px;
+  }
+
+  .edit-link-icon {
+    margin-right: 8px;
+    margin-left: unset !important;
+  }
+
+  .vp-doc .header-anchor {
+    right: unset;
+    left: 0;
+    margin-right: unset;
+    margin-left: -0.87em;
+  }
+
+  .VPSidebarItem .items {
+    border-left: 1px solid var(--vp-c-divider);
+    border-right: unset !important;
+    padding-left: 16px;
+    padding-right: unset;
+  }
+
+  @media only screen and (width > 960px) {
+    .VPSidebar {
+      inset-inline-start: 0 !important;
+    }
+
+    .VPContent.has-sidebar {
+      padding-left: var(--vp-sidebar-width) !important;
+      padding-right: unset !important;
+    }
+
+    .VPNavBar.has-sidebar .content {
+      padding-right: 32px !important;
+      padding-left: var(--vp-sidebar-width) !important;
+    }
+
+    .VPNavBar.has-sidebar .title {
+      left: 0;
+      right: unset;
+    }
+
+    .VPNavBar.has-sidebar .divider {
+      padding-left: var(--vp-sidebar-width) !important;
+      padding-right: unset !important;
+    }
+
+    .VPNavBarSearch {
+      padding-left: 32px !important;
+      padding-right: unset !important;
+    }
+  }
+}
