@@ -91,15 +91,13 @@ onUnmounted(() => {
 });
 
 // Watch for route and language changes
-watch(
-  [() => route.path, () => lang.value],
-  ([newRoute, newLang], [oldRoute, oldLang]) => {
+watch(() => lang.value, (newLang, oldLang) => {
     // shouldReloadScript.value = false;
 
-    if (newRoute !== oldRoute) {
-      window.remark_config.url = fullPath.value;
+    // if (newRoute !== oldRoute) {
+      // window.remark_config.url = fullPath.value;
       // shouldReloadScript.value = true;
-    }
+    // }
 
     if (newLang !== oldLang) {
       window.remark_config.locale = newLang;

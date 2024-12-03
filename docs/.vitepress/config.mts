@@ -13,7 +13,7 @@ dotenv.config({
 
 console.log('envs:', process.env);
 
-const github_link_url = 'https://github.com/virak-cloud/docs/edit/main/docs/:path'
+const github_link_url = 'https://github.com/virak-cloud/docs/edit/master/docs/:path'
 
 export default defineConfig({
   lang: 'fa-IR',
