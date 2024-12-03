@@ -84,10 +84,10 @@ onUnmounted(() => {
     remark42Instance.value = null;
   }
 
-  if (isEventListenerAdded.value) {
-    window.removeEventListener("REMARK42::ready", initRemark42);
-    isEventListenerAdded.value = false;
-  }
+  window.removeEventListener("REMARK42::ready", initRemark42);
+  // if (isEventListenerAdded.value) {
+    // isEventListenerAdded.value = false;
+  // }
 });
 
 // Watch for route and language changes
