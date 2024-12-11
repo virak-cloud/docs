@@ -11,8 +11,6 @@ dotenv.config({
 });
 
 
-console.log('envs:', process.env);
-
 const github_link_url = 'https://github.com/virak-cloud/docs/edit/master/docs/:path'
 
 export default defineConfig({
