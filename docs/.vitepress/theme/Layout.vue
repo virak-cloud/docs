@@ -35,7 +35,6 @@ watch([() => isDark.value, () => route.path], () => {
 
 const showComment = ref(true)
 watch(()=>route.path , async()=>{
-  console.log('route changed');
   showComment.value = false
   await nextTick()
   showComment.value = true

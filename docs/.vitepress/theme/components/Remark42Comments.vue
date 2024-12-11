@@ -18,8 +18,6 @@ const fullPath = computed(() => {
 function initRemark42() {
   if (!window.REMARK42 || import.meta.env.SSR) return;
 
-  console.log("Initializing Remark42...");
-
   if (remark42Instance.value) {
     remark42Instance.value.destroy();
   }
@@ -39,7 +37,6 @@ function loadRemarkScript() {
 
   const existingScript = document.querySelector("script[src*='embed.js']");
   if (existingScript) {
-    console.log("Removing old Remark42 script");
     existingScript.remove();
   }
 
@@ -77,13 +74,10 @@ onMounted(async () => {
 });
 
 onUnmounted(() => {
-  console.log("Cleaning up Remark42...");
-
   if (remark42Instance.value) {
     remark42Instance.value.destroy();
     remark42Instance.value = null;
   }
-
   window.removeEventListener("REMARK42::ready", initRemark42);
   // if (isEventListenerAdded.value) {
     // isEventListenerAdded.value = false;
