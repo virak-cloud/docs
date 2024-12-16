@@ -4,8 +4,8 @@ import { useRoute, useData } from "vitepress";
 
 const remark42 = ref(null);
 const remark42Instance = ref(null);
-const isScriptLoaded = ref(false); // Track if the script is already loaded
-const isEventListenerAdded = ref(false); // Track if event listener is added
+// const isScriptLoaded = ref(false); // Track if the script is already loaded
+// const isEventListenerAdded = ref(false); // Track if event listener is added
 const route = useRoute();
 const { isDark, lang } = useData();
 
@@ -13,10 +13,10 @@ const fullPath = computed(() => {
   return window.location.origin + route.path;
 });
 
+// const shouldReloadScript = ref(false)
+
 function initRemark42() {
   if (!window.REMARK42 || import.meta.env.SSR) return;
-
-  console.log("Initializing Remark42...");
 
   if (remark42Instance.value) {
     remark42Instance.value.destroy();
@@ -30,14 +30,13 @@ function initRemark42() {
 }
 
 function loadRemarkScript() {
-  if (isScriptLoaded.value) {
-    console.log("Remark42 script already loaded");
-    return;
-  }
+  // if (isScriptLoaded.value) {
+  //   console.log("Remark42 script already loaded");
+  //   return;
+  // }
 
   const existingScript = document.querySelector("script[src*='embed.js']");
   if (existingScript) {
-    console.log("Removing old Remark42 script");
     existingScript.remove();
   }
 
@@ -46,11 +45,11 @@ function loadRemarkScript() {
   scriptTag.defer = true;
 
   scriptTag.onload = () => {
-    isScriptLoaded.value = true;
-    if (!isEventListenerAdded.value) {
+    // isScriptLoaded.value = true;
+    // if (!isEventListenerAdded.value) {
       window.addEventListener("REMARK42::ready", initRemark42);
-      isEventListenerAdded.value = true;
-    }
+      // isEventListenerAdded.value = true;
+    // }
   };
 
   document.body.appendChild(scriptTag);
@@ -75,41 +74,40 @@ onMounted(async () => {
 });
 
 onUnmounted(() => {
-  console.log("Cleaning up Remark42...");
-
   if (remark42Instance.value) {
     remark42Instance.value.destroy();
     remark42Instance.value = null;
   }
-
-  if (isEventListenerAdded.value) {
-    window.removeEventListener("REMARK42::ready", initRemark42);
-    isEventListenerAdded.value = false;
-  }
+  window.removeEventListener("REMARK42::ready", initRemark42);
+  // if (isEventListenerAdded.value) {
+    // isEventListenerAdded.value = false;
+  // }
 });
 
 // Watch for route and language changes
-watch(
-  [() => route.path, () => lang.value],
-  ([newRoute, newLang], [oldRoute, oldLang]) => {
-    let shouldReloadScript = false;
+watch(() => lang.value, (newLang, oldLang) => {
+    // shouldReloadScript.value = false;
 
-    if (newRoute !== oldRoute) {
-      window.remark_config.url = fullPath.value;
-      shouldReloadScript = true;
-    }
+    // if (newRoute !== oldRoute) {
+      // window.remark_config.url = fullPath.value;
+      // shouldReloadScript.value = true;
+    // }
 
     if (newLang !== oldLang) {
       window.remark_config.locale = newLang;
-      shouldReloadScript = true;
+      // shouldReloadScript.value = true;
     }
 
-    if (shouldReloadScript) {
-      if (remark42Instance.value) {
-        remark42Instance.value.destroy();
-      }
-      loadRemarkScript();
+    if (remark42Instance.value) {
+      remark42Instance.value.destroy();
     }
+    loadRemarkScript();
+    // if (shouldReloadScript.value) {
+    //   if (remark42Instance.value) {
+    //     remark42Instance.value.destroy();
+    //   }
+    //   loadRemarkScript();
+    // }
   }
 );
 
@@ -119,6 +117,17 @@ watch(isDark, (newVal, oldVal) => {
     window.REMARK42.changeTheme(newVal ? "dark" : "light");
   }
 });
+
+// watch(()=> shouldReloadScript , (newVal)=>{
+//   console.log('shouldReloadScript' , shouldReloadScript);
+
+//     if (newVal.value) {
+//       if (remark42Instance.value) {
+//         remark42Instance.value.destroy();
+//       }
+//       loadRemarkScript();
+//     }
+// })
 
 </script>
 <template>

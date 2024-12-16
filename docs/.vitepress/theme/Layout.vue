@@ -33,6 +33,14 @@ watch([() => isDark.value, () => route.path], () => {
   })
 });
 
+const showComment = ref(true)
+watch(()=>route.path , async()=>{
+  showComment.value = false
+  await nextTick()
+  showComment.value = true
+
+})
+
 const enableTransitions = () =>
   'startViewTransition' in document &&
   window.matchMedia('(prefers-reduced-motion: no-preference)').matches
@@ -75,7 +83,7 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
     </template>
   </DefaultTheme.Layout>
   <Teleport v-if="contentLoaded && !weAreInHome" to="#VPContent .content-container" defer>
-    <CommentBox />
+    <CommentBox v-if="showComment"/>
   </Teleport>
 </template>
 
