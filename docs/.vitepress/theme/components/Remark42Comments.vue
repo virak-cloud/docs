@@ -114,7 +114,7 @@ watch(() => lang.value, (newLang, oldLang) => {
 // Watch for theme changes
 watch(isDark, (newVal, oldVal) => {
   if (newVal !== oldVal) {
-    window.REMARK42.changeTheme(newVal ? "dark" : "light");
+    window.REMARK42?.changeTheme(newVal ? "dark" : "light");
   }
 });
 
