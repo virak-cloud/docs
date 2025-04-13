@@ -31,13 +31,13 @@ You can see the list of available software in the marketplace in the image below
   alt="Marketplace - Ready to use Applications"
 /> -->
 
-## بازارچه
+## Marketplace
 You can also select the required applications from the Marketplace section.
 The list of available software in the Marketplace can be seen in the image below:
 
 <DarkModeImage
-  dark-src="/images/guides/fa/dark/instances/marketplace.webp"
-  light-src="/images/guides/fa/light/instances/marketplace.webp"
+  dark-src="/images/guides/en/dark/instances/marketplace.webp"
+  light-src="/images/guides/en/light/instances/marketplace.webp"
   alt="Marketplace - Ready to use Applications"
 />
 
