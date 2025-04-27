@@ -24,6 +24,10 @@
   z-index: 2;
 }
 
+header.VPNav .title .logo {
+    height: 35px !important;
+}
+
 /* Define the custom font for RTL */
 @font-face {
   font-family: 'IranSans';
@@ -80,7 +84,6 @@
   .logo {
     margin-right: 8px !important;
     margin-left: unset !important;
-    height: 35px !important;
   }
 
   .title .VPNavBarTitle .title span {
