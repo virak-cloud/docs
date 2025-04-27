@@ -6,7 +6,7 @@ hero:
   text: Cloud Service Provider
   tagline: Leading the Way in Cloud Computing Services
   image:
-    src: /images/logo-final.webp
+    src: /images/logo.webp
     alt: Virak Cloud
   actions:
     - theme: brand
@@ -30,4 +30,3 @@ features:
     title: Private Networking
     details: Secure private networks for managing and transferring data without public access
 ---
-

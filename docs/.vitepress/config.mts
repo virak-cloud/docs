@@ -48,7 +48,7 @@ export default defineConfig({
   },
   lastUpdated: false,
   themeConfig: {
-    logo: '/images/logo-final.webp',
+    logo: '/images/logo.webp',
     search: {
       provider: 'local',
       options: {

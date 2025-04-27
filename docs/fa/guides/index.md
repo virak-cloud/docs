@@ -6,7 +6,7 @@ hero:
   text: ارائه‌دهنده خدمات ابری
   tagline: پیشگام در ارائه خدمات رایانش ابری
   image:
-    src: /images/logo-final.webp
+    src: /images/logo.webp
     alt: ویراک کلاد
   actions:
     - theme: brand
