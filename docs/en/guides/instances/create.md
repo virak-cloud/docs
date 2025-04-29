@@ -266,3 +266,7 @@ After 3 minutes, your cloud server will be created and a confirmation SMS will b
   light-src="/images/guides/en/light/instances/overal-os-info.webp"
   alt="Overal OS info"
 />
+
+::: info Recommendation:
+We recommend having at least 24 hours of credit in your account before creating a instance.
+:::
