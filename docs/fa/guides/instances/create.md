@@ -247,3 +247,7 @@
   light-src="/images/guides/fa/light/instances/overal-os-info.webp"
   alt="Overal OS info"
 />
+
+::: info توصیه:
+پیشنهاد میکنیم قبل از ساخت ابرک حداقل به اندازه ۲۴ ساعت در حساب کاربری خود شارژ داشته باشید.
+:::

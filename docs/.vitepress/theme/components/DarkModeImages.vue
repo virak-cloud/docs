@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="isDark">
+    <div v-if="isDarkMode">
       <img width="100%" height="auto" data-zoomable :src="darkSrc" :alt="alt" />
     </div>
     <div v-else>
@@ -11,7 +11,12 @@
 
 <script setup>
 import { useData } from 'vitepress'
+import { computed } from 'vue'
 const { isDark } = useData()
+
+const isDarkMode = computed(() => {
+  return isDark.value
+})
 
 defineProps({
   darkSrc: String,
@@ -26,7 +31,7 @@ defineProps({
 }
 
 .dark {
-    --image-border-color: #444!important;
+  --image-border-color: #444 !important;
 }
 
 [data-zoomable] {
