@@ -1,18 +1,19 @@
 <template>
-  <div>
-    <div v-if="isDarkMode">
-      <img width="100%" height="auto" data-zoomable :src="darkSrc" :alt="alt" />
-    </div>
-    <div v-else>
-      <img data-zoomable :src="lightSrc" :alt="alt" />
-    </div>
+  <div v-if="mounted">
+    <img width="100%" height="auto" data-zoomable :src="isDarkMode ? darkSrc : lightSrc" :alt="alt" />
   </div>
 </template>
 
 <script setup>
+import { ref, onMounted, computed } from 'vue'
 import { useData } from 'vitepress'
-import { computed } from 'vue'
 const { isDark } = useData()
+
+const mounted = ref(false)
+
+onMounted(() => {
+  mounted.value = true
+})
 
 const isDarkMode = computed(() => {
   return isDark.value

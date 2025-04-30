@@ -25,7 +25,7 @@
 }
 
 header.VPNav .title .logo {
-    height: 35px !important;
+  height: 35px !important;
 }
 
 /* Define the custom font for RTL */
@@ -58,9 +58,6 @@ header.VPNav .title .logo {
     transform: scaleX(-1);
   }
 
-  #VPSidebarNav .VPSidebarItem.collapsed .caret .caret-icon {
-    transform: scaleX(-1);
-  }
 
   .search-input {
     padding: 6px 12px;
@@ -111,6 +108,10 @@ header.VPNav .title .logo {
     border-right: unset !important;
     padding-left: 16px;
     padding-right: unset;
+  }
+
+  #VPSidebarNav .VPSidebarItem.collapsed .caret .caret-icon {
+    transform: rotate(0deg);
   }
 
   @media only screen and (width > 960px) {
