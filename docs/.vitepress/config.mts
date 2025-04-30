@@ -63,7 +63,7 @@ export default defineConfig({
                 displayDetails: 'نمایش جزئیات',
                 resetButtonTitle: 'پاک کردن متن جستجو',
                 backButtonTitle: 'بازگشت',
-                noResultsText: 'نتیجه ای برای جسنجوی شما پیدا نشد :(',
+                noResultsText: 'نتیجه ای برای جستجوی شما پیدا نشد :(',
                 footer: {
                   selectText: 'انتخاب کنید',
                   navigateText: 'پیمایش کنید',
