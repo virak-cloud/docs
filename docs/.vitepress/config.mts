@@ -28,7 +28,7 @@ export default defineConfig({
         href: '/favicon.ico'
       }
     ],
-    ['meta', { name: 'robots', content: 'noindex, nofollow' }],
+    // ['meta', { name: 'robots', content: 'noindex, nofollow' }],
   ],
   vite: {
     css: {
