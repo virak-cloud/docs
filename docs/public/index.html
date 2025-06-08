@@ -5,6 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Virak Cloud Service Documentation | Virak Cloud</title>
+  <!-- SEO Meta -->
+  <meta name="description" content="Official documentation for Virak Cloud services in English and Farsi.">
+  <link rel="canonical" href="https://docs.virakcloud.com/" />
+  <meta name="robots" content="index, follow" />
+  <!-- Hreflang for multilingual SEO -->
+  <link rel="alternate" hreflang="en" href="https://docs.virakcloud.com/en/guides/" />
+  <link rel="alternate" hreflang="fa" href="https://docs.virakcloud.com/fa/guides/" />
   <style>
     body,
     html {
@@ -99,6 +106,18 @@
       stroke-dasharray: 66px;
       stroke-dashoffset: 66px;
       animation: 1s ease 0.5s infinite alternate forwards running lineanim;
+    }
+
+    .fallback-links {
+      display: block;
+      text-align: center;
+    }
+
+    .fallback-links a {
+      margin: 0 1rem;
+      font-size: 1.2rem;
+      color: #0277bd;
+      text-decoration: none;
     }
 
     /* ============= noScript =============*/
@@ -226,6 +245,13 @@
         stroke="#0277BD" />
     </svg>
   </div>
+  <noscript>
+    <div class="fallback-links">
+      <p>JavaScript is disabled. Please choose your language:</p>
+      <a href="/en/guides/">English</a>
+      <a href="/fa/guides/">فارسی</a>
+    </div>
+  </noscript>
 </body>
 
 </html>
