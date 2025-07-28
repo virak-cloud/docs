@@ -165,11 +165,20 @@ export default defineConfig({
                     text: 'ایجاد ابرک ها',
                     link: '/fa/guides/instances/create'
                   },
+                ],
+                collapsed: true
+              },
+              {
+                text: 'ذخیره سازی ابری',
+                items: [
                   {
-                    text: 'دیسک ها',
-                    link: '/fa/guides/instances/disk'
+                    text: 'دیسک های مجازی',
+                    link: '/fa/guides/storage/virtual-disk'
+                  },
+                  {
+                    text: 'آبجکت استوریج',
+                    link: '/fa/guides/storage/object-storage'
                   }
-
                 ],
                 collapsed: true
               },
@@ -306,9 +315,19 @@ export default defineConfig({
                     text: 'Create Cloud Instances',
                     link: '/en/guides/instances/create'
                   },
+                ],
+                collapsed: true
+              },
+              {
+                text: 'Cloud Storage',
+                items: [
                   {
-                    text: 'Disks',
-                    link: '/en/guides/instances/disk'
+                    text: 'Virtual Disks',
+                    link: '/en/guides/storage/virtual-disk'
+                  },
+                  {
+                    text: 'Object Storage',
+                    link: '/en/guides/storage/object-storage'
                   }
                 ],
                 collapsed: true
