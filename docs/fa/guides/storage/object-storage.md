@@ -55,7 +55,7 @@
 ### 5. اطلاعات دسترسی
 
 اطلاعات لازم برای اتصال به سرویس:
-- **آدرس URL**: نقطه دسترسی به صندوقچه (مثال: `https://s3.dev.virakcloud.net/test-m09i`).
+- **آدرس URL**: نقطه دسترسی به صندوقچه (مثال: `https://s3.virakcloud.com/test-m09i`).
 - **کلید دسترسی (Access Key)**: شناسه احراز هویت (مثال: `vrk-01K15b79kahpm1jbgfv9445`).
 - **کلید مخفی (Secret Key)**: کلید امنیتی برای امضای درخواست‌ها (مخفی‌شده).
 
@@ -85,7 +85,7 @@
   - Output: `json`
   - آپلود فایل:
     ```bash
-    aws s3 cp myfile.txt s3://test-m09i/myfile.txt --endpoint-url https://s3.dev.virakcloud.net
+    aws s3 cp myfile.txt s3://test-m09i/myfile.txt --endpoint-url https://s3.virakcloud.com
     ```
 
 ## نکات و توصیه‌ها
