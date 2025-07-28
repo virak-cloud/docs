@@ -53,7 +53,7 @@ Control access to buckets and files:
 ### 5. Access Information
 
 Information required to connect to the service:
-- **URL**: The bucket access endpoint (e.g., `https://s3.dev.virakcloud.net/test-m09i`).
+- **URL**: The bucket access endpoint (e.g., `https://s3.virakcloud.com/test-m09i`).
 - **Access Key**: Authentication identifier (e.g., `vrk-01K15b79kahpm1jbgfv9445`).
 - **Secret Key**: Security key for signing requests (hidden).
 
@@ -83,7 +83,7 @@ Information required to connect to the service:
   - Output: `json`
   - Upload a file:
     ```bash
-    aws s3 cp myfile.txt s3://test-m09i/myfile.txt --endpoint-url https://s3.dev.virakcloud.net
+    aws s3 cp myfile.txt s3://test-m09i/myfile.txt --endpoint-url https://s3.virakcloud.com
     ```
 
 ## Tips and Recommendations
