@@ -73,6 +73,12 @@ header.VPNav .title .logo {
     text-align: left !important;
   }
 
+  .vp-doc ul,
+  .vp-doc ol {
+    padding-right: unset;
+    padding-left: 1.25rem;
+  }
+
   .menu {
     right: 0;
     left: unset !important;

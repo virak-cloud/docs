@@ -15,7 +15,7 @@ Buckets are the primary storage units in the Object Storage service. Users can e
 
 
 ### 2. Creating a New Bucket
-
+<br/>
 <DarkModeImage
   dark-src="/images/guides/en/dark/storage/object-storage/create-object-storage.webp"
   light-src="/images/guides/en/light/storage/object-storage/create-object-storage.webp"
@@ -23,14 +23,14 @@ Buckets are the primary storage units in the Object Storage service. Users can e
 />
 
 Creating a new bucket involves the following options:
-- **Bucket Name**: A unique name to identify the bucket (e.g., `test-m09i`).
+- **Bucket Name**: A unique name to identify the bucket (e.g., `test`).
 - **Change access level**:
-    - 1. public: This option allows anyone with the link to access the object.
-    - 2. private: This option restricts access to the vault only to authorized users.
+    1. public: This option allows anyone with the link to access the object.
+    2. private: This option restricts access to the vault only to authorized users.
 
 
 ### 3. File Management
-
+<br/>
 <DarkModeImage
   dark-src="/images/guides/en/dark/storage/object-storage/details-object-storage.webp"
   light-src="/images/guides/en/light/storage/object-storage/details-object-storage.webp"
@@ -86,13 +86,9 @@ Information required to connect to the service:
     aws s3 cp myfile.txt s3://test-m09i/myfile.txt --endpoint-url https://s3.dev.virakcloud.net
     ```
 
----
-
 ## Tips and Recommendations
 
 - **Security**: Keep access keys confidential and avoid sharing them.
-
----
 
 ## Conclusion
 

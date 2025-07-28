@@ -15,7 +15,7 @@
 
 
 ### 2. ایجاد صندوقچه جدید
-
+<br/>
 <DarkModeImage
   dark-src="/images/guides/fa/dark/storage/object-storage/create-object-storage.webp"
   light-src="/images/guides/fa/light/storage/object-storage/create-object-storage.webp"
@@ -23,14 +23,14 @@
 />
 
 ایجاد صندوقچه جدید با گزینه‌های زیر انجام می‌شود:
-- **نام صندوقچه**: نامی یکتا برای شناسایی صندوقچه (مثال: `test-m09i`).
+- **نام صندوقچه**: نامی یکتا برای شناسایی صندوقچه (مثال: `test`).
 - **سطح دسترسی به صندوقچه**:
-    - 1. خصوصی : این گزینه دسترسی به صندوقچه را فقط به کاربران مجاز محدود می‌کند.
-    - 2. عمومی : این گزینه به هر کسی که لینک را داشته باشد اجازه دسترسی به ابجکت می‌دهد.
+    1. خصوصی : این گزینه دسترسی به صندوقچه را فقط به کاربران مجاز محدود می‌کند.
+    2. عمومی : این گزینه به هر کسی که لینک را داشته باشد اجازه دسترسی به ابجکت می‌دهد.
 
 
 ### 3. مدیریت فایل‌ها
-
+<br/>
 <DarkModeImage
   dark-src="/images/guides/fa/dark/storage/object-storage/details-object-storage.webp"
   light-src="/images/guides/fa/light/storage/object-storage/details-object-storage.webp"
@@ -88,14 +88,9 @@
     aws s3 cp myfile.txt s3://test-m09i/myfile.txt --endpoint-url https://s3.dev.virakcloud.net
     ```
 
-
----
-
 ## نکات و توصیه‌ها
 
 - **امنیت**: کلیدهای دسترسی را محرمانه نگه دارید و از اشتراک‌گذاری آن‌ها خودداری کنید.
-
----
 
 ## نتیجه‌گیری
 
