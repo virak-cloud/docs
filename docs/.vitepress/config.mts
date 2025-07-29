@@ -183,6 +183,20 @@ export default defineConfig({
                 collapsed: true
               },
               {
+                text: 'کوبرنتیز',
+                items: [
+                  {
+                    text: 'ایجاد کلاستر',
+                    link: '/fa/guides/kubernetes/create'
+                  },
+                  {
+                    text: 'جزئیات کلاستر',
+                    link: '/fa/guides/kubernetes/details'
+                  },
+                ],
+                collapsed: true
+              },
+              {
                 text: 'شبکه های مجازی',
                 items: [
                   {
@@ -329,6 +343,20 @@ export default defineConfig({
                     text: 'Object Storage',
                     link: '/en/guides/storage/object-storage'
                   }
+                ],
+                collapsed: true
+              },
+              {
+                text: 'Kubernetes',
+                items: [
+                  {
+                    text: 'Create Cluster',
+                    link: '/en/guides/kubernetes/create'
+                  },
+                  {
+                    text: 'Cluster Details',
+                    link: '/en/guides/kubernetes/details'
+                  },
                 ],
                 collapsed: true
               },
