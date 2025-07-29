@@ -51,6 +51,3 @@ An SSH authentication key is essential for cluster creation.
 8. **Click on the Create Button:** After ensuring all fields are filled, click the "Create" button.
 
 After creating the cluster, it may take a few minutes for your cluster to be ready.
-
-## Conclusion
-This page allows users to easily create a new Kubernetes cluster while adhering to security considerations. Given the mentioned points, users should ensure that all steps are followed correctly to prevent any issues.
