@@ -285,6 +285,10 @@ export default defineConfig({
                 collapsed: true,
               },
               {
+                text: 'وب سرویس ها',
+                link: '/fa/guides/web-services'
+              },
+              {
                 text: 'گزارش تغییرات',
                 link: '/fa/guides/changelogs'
               }
@@ -447,6 +451,10 @@ export default defineConfig({
                   }
                 ],
                 collapsed: true
+              },
+              {
+                text: 'Web Services',
+                link: '/en/guides/web-services'
               },
               {
                 text: 'Changelog',
