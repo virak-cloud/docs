@@ -60,14 +60,11 @@ Authorization: Bearer YOUR_TOKEN
 ### نمونه درخواست API – ساخت توکن
 
 ```bash
-curl -X POST https://api.virakcloud.com/v1/tokens \
-  -H "Authorization: Bearer YOUR_ADMIN_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "name": "توکن API من",
-    "expires_at": "2025-12-31",
-    "scopes": ["read", "write"]
-  }'
+curl --request GET \
+    --get "https://public-api.virakcloud.com/api/external/zones" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"
 ```
 
 
