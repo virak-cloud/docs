@@ -14,7 +14,7 @@ After logging into the [panel](https://panel.virakcloud.com/), you can view the 
 />
 
 ## Account Charge
-On the right side of the panel, you can view your panel's charge balance. If you need to increase your panel's charge balance, you can make a deposit in this section.
+On the left side of the panel, you can view your panel's charge balance. If you need to increase your panel's charge balance, you can make a deposit in this section.
 
 <DarkModeImage
   dark-src="/images/guides/en/dark/increase-inventory.webp"
@@ -23,7 +23,7 @@ On the right side of the panel, you can view your panel's charge balance. If you
 />
 
 ## Sidebar Links
-As shown in the image below, you can see the main dashboard on the right side of the panel, which includes the following:
+As shown in the image below, you can see the main dashboard on the left side of the panel, which includes the following:
 
 1. Cloud Infrastructure Hosting
 2. Domain Hosting
