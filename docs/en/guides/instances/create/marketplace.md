@@ -44,7 +44,6 @@ In addition to Webmin, which gives you full server/service configuration options
   alt="Marketplace - Ready to use Applications"
 />
 
----
 
 # Installation Steps
 
@@ -101,14 +100,12 @@ For example, the image below displays access info for the WordPress web page, We
 />
 
 
----
+## More Info
 
-# More Info
-
-## Webmin:
+### Webmin:
 Webmin is a web-based control panel for managing Linux/Unix servers. It allows sysadmins to perform many administrative tasks without needing the command line, accessible via the provided address and port.
 
-### Use Cases:
+#### Use Cases:
 - Manage users and groups
 - Control services like Apache, NGINX, MySQL, etc.
 - Edit system config files
@@ -116,7 +113,7 @@ Webmin is a web-based control panel for managing Linux/Unix servers. It allows s
 - Monitor system resources (CPU, RAM, Disk)
 - Install/update packages via apt or yum
 
-### Benefits:
+#### Benefits:
 - Web-based graphical interface
 - Reduces the need for command-line skills
 - Great for admins who prefer GUI over CLI
@@ -129,18 +126,21 @@ The image below shows the Webmin interface, offering powerful configuration tool
   light-src="/images/guides/common/instance/marketplace/8-webmin.jpg"
   alt="Marketplace - Ready to use Applications"
 />
+<br/>
 
-## Adminer:
+---
+
+### Adminer:
 Adminer is a lightweight, single-file, open-source database management tool (often used with MySQL / MariaDB) via a web interface. It’s a lightweight alternative to phpMyAdmin. Access it via the provided address and port.
 
-### Use Cases:
+#### Use Cases:
 - Connect to databases, view tables/records
 - Execute SQL queries
 - Manage users and permissions
 - Import/export databases
 - Create/delete tables and databases
 
-### Benefits:
+#### Benefits:
 - Just one PHP file (no complex setup)
 - Fast, lightweight, low resource usage
 - Supports multiple databases: MySQL, PostgreSQL, SQLite, MS SQL, Oracle, etc.
