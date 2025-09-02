@@ -154,16 +154,20 @@ export default defineConfig({
                 text: 'میزبانی زیرساخت ابری',
                 items: [
                   {
-                    text: 'لیست ابرک ها',
+                    text: 'لیست سرورهای ابری',
                     link: '/fa/guides/instances/list'
                   },
                   {
-                    text: 'جزئیات ابرک ها',
+                    text: 'جزئیات سرور ابری',
                     link: '/fa/guides/instances/details'
                   },
                   {
-                    text: 'ایجاد ابرک ها',
+                    text: 'ایجاد سرور ابری',
                     link: '/fa/guides/instances/create'
+                  },
+                  {
+                    text: 'بازارچه',
+                    link: '/fa/guides/instances/create/marketplace'
                   },
                 ],
                 collapsed: true
@@ -210,7 +214,7 @@ export default defineConfig({
                           link: '/fa/guides/networks/details/config'
                         },
                         {
-                          text: 'ابرک های متصل',
+                          text: 'سرورهای متصل',
                           link: '/fa/guides/networks/details/connected-instances'
                         },
                         {
@@ -332,6 +336,10 @@ export default defineConfig({
                   {
                     text: 'Create Cloud Instances',
                     link: '/en/guides/instances/create'
+                  },
+                  {
+                    text: 'Marketplace',
+                    link: '/en/guides/instances/create/marketplace'
                   },
                 ],
                 collapsed: true
