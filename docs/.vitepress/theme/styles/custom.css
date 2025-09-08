@@ -28,6 +28,10 @@ header.VPNav .title .logo {
   height: 35px !important;
 }
 
+.VPSidebar.open {
+  transform: translateX(0) !important;
+}
+
 /* Define the custom font for RTL */
 @font-face {
   font-family: 'IranSans';
@@ -69,8 +73,9 @@ header.VPNav .title .logo {
 
 /*rtl:ignore*/
 :where([dir="ltr"]) {
-  .VPHero.has-image .container {
-    text-align: left !important;
+  .menu-icon {
+    margin-right: 8px;
+    margin-left: unset !important;
   }
 
   .vp-doc ul,
@@ -121,6 +126,10 @@ header.VPNav .title .logo {
   }
 
   @media only screen and (width > 960px) {
+    .VPHero.has-image .container {
+      text-align: left !important;
+    }
+
     .VPSidebar {
       inset-inline-start: 0 !important;
     }
@@ -148,6 +157,13 @@ header.VPNav .title .logo {
     .VPNavBarSearch {
       padding-left: 32px !important;
       padding-right: unset !important;
+    }
+  }
+
+  @media only screen and (max-width: 960px) {
+    .VPSidebar {
+      left: 0;
+      transform: translateX(-100%) !important;
     }
   }
 }

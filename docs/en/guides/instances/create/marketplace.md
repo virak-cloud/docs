@@ -45,7 +45,7 @@ In addition to Webmin, which gives you full server/service configuration options
 />
 
 
-# Installation Steps
+## Installation Steps
 
 ::: tip Note:
 In this tutorial, WordPress has been selected as the OS.
