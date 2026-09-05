@@ -48,5 +48,4 @@ features:
   - icon: 📩
     title: Integrated Support & Ticketing
     details: Submit, track, and manage support requests—technical or billing—all through an easy-to-use ticket interface.
-
 ---

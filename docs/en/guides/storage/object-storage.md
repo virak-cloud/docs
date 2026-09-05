@@ -9,12 +9,13 @@ The **Object Storage** service, provided by the cloud platform, is a powerful an
 ### 1. Bucket Management
 
 Buckets are the primary storage units in the Object Storage service. Users can easily create, delete, or manage buckets.
+
 - **Create New Bucket**: Create buckets with custom names.
 - **Delete Bucket**: Quickly delete buckets with a single click.
 - **Advanced Settings**: Rename, manage access, and more via the actions menu.
 
-
 ### 2. Creating a New Bucket
+
 <br/>
 <DarkModeImage
   dark-src="/images/guides/en/dark/storage/object-storage/create-object-storage.webp"
@@ -23,13 +24,14 @@ Buckets are the primary storage units in the Object Storage service. Users can e
 />
 
 Creating a new bucket involves the following options:
+
 - **Bucket Name**: A unique name to identify the bucket (e.g., `test`).
 - **Change access level**:
-    1. public: This option allows anyone with the link to access the object.
-    2. private: This option restricts access to the vault only to authorized users.
-
+  1. public: This option allows anyone with the link to access the object.
+  2. private: This option restricts access to the vault only to authorized users.
 
 ### 3. File Management
+
 <br/>
 <DarkModeImage
   dark-src="/images/guides/en/dark/storage/object-storage/details-object-storage.webp"
@@ -38,6 +40,7 @@ Creating a new bucket involves the following options:
 />
 
 Users can manage files within their buckets:
+
 - **Upload File**: Add new files (e.g., `sample.zip` with a size of 103.32 KB).
 - **Creating and Managing Folders**: This feature allows users to create new folders in object storage, enabling them to manage their content in a more organized manner. With this capability, users can easily categorize their files and data into different folders, facilitating easier access and management.
 - **Download and Delete**: Options to download or delete files using respective icons.
@@ -46,13 +49,15 @@ Users can manage files within their buckets:
 ### 4. Access Management
 
 Control access to buckets and files:
+
 - **Public or Private**: Set buckets or files as Public or Private:
-    1. public: This option allows anyone with the link to access the object.
-    2. private: This option restricts access to the vault only to authorized users.
+  1. public: This option allows anyone with the link to access the object.
+  2. private: This option restricts access to the vault only to authorized users.
 
 ### 5. Access Information
 
 Information required to connect to the service:
+
 - **URL**: The bucket access endpoint (e.g., `https://s3.virakcloud.com/test-m09i`).
 - **Access Key**: Authentication identifier (e.g., `vrk-01K15b79kahpm1jbgfv9445`).
 - **Secret Key**: Security key for signing requests (hidden).
@@ -60,18 +65,22 @@ Information required to connect to the service:
 ## How to Use
 
 #### 1. Creating a New Bucket
+
 - Go to the [object storage section](https://panel.virakcloud.com/storage/bucket/list) and click "Create New Bucket."
 - Determine the bucket name and the access level.
 - Click "Confirm."
 
 #### 2. Uploading a File or Creating Folder
+
 - Select the desired bucket.
 - Click on "Upload File" button and upload a file.
 
 #### 3. Managing Access
+
 - In bucket settings, change access to Public or Private.
 
 #### 4. Connecting with Access Keys
+
 - Copy the URL, Access Key, and Secret Key from the panel.
 - Use them in S3-compatible tools (e.g., AWS CLI):
   ```bash

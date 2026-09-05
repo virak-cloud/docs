@@ -2,13 +2,11 @@
 
 In this section, the user can manage the created instance and monitor the status of all resources.
 
-
 <DarkModeImage
   dark-src="/images/guides/en/dark/instances/instance-details.webp"
   light-src="/images/guides/en/light/instances/instance-details.webp"
   alt="Instance Details"
 />
-
 
 ## The first row includes the following:
 

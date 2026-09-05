@@ -15,6 +15,7 @@ By default, public networks will exist in this section, and users will not have 
 Network operations include the following:
 
 ### Connect Instance to Network
+
 By clicking on "Connect to Instance," a list of all machines built by the user is displayed, and the user can connect their instance to the corresponding network.
 
 ::: warning Note 1:
@@ -26,12 +27,15 @@ If the desired instance is not on the list, it has certainly been connected to t
 :::
 
 ### Disconnect Instance from Network
+
 By clicking on "Disconnect from Instance," the user can disconnect their instance from the desired network.
 
 ### Delete Network
+
 If no instance is connected to the desired network, the user can delete their network.
 
 ### Network Details
+
 By entering the details section, we can benefit from the capabilities and detailed settings related to the network.
 
 <DarkModeImage

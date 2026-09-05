@@ -13,10 +13,9 @@ export default {
   Layout: Layout,
   enhanceApp({ app, router, siteData }) {
     googleAnalytics({
-      id: 'G-DHGDB9E1G9',
+      id: 'G-DHGDB9E1G9'
     })
     app.component('DarkModeImage', DarkModeImage)
     app.component('CommentBox', Remark42Comments)
-
   }
 } satisfies Theme

@@ -1,15 +1,19 @@
 # Network Information
+
 ::: warning Note:
- Layer 2 network settings only provide us with information such as connected clouds and network specifications.
+Layer 2 network settings only provide us with information such as connected clouds and network specifications.
 :::
 
 Details of layer 2 + 3 networks include the following.
 
 ## Details
+
 ### Configuration Information
- By creating a private network of the virtual router type, the user specifies their gateway IP address, which they can view in this section. The IPv6 address will be selected automatically.
+
+By creating a private network of the virtual router type, the user specifies their gateway IP address, which they can view in this section. The IPv6 address will be selected automatically.
 
 ### Public IPs
+
 As soon as a private network of the virtual router type is created and the first cloud is connected to it, the virtual router will receive a visible public IP address by default, which will be used as the Source NAT operation to establish communication between the connected clouds to the outside network.
 
 <DarkModeImage

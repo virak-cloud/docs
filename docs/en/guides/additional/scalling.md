@@ -1,4 +1,3 @@
-
 # Scaling Guide for Virtual Machines and Kubernetes Clusters in Virak Panel
 
 The Virak Panel offers advanced scaling capabilities, enabling you to manage server resources flexibly and efficiently according to your business needs. Below is a comprehensive guide to these features.
@@ -7,36 +6,39 @@ The Virak Panel offers advanced scaling capabilities, enabling you to manage ser
 
 ### Vertical Scaling
 
-- **In Live Mode:** 
+- **In Live Mode:**
   - **Scale Up:** Increase resources like CPU and RAM without shutting down the machine.
   - **Scale Down:** Not possible. To reduce resources, the machine must be stopped.
 
-- **In Stopped Mode:** 
+- **In Stopped Mode:**
   - You can fully increase or decrease resources.
 
 ### Horizontal Scaling
+
 By creating instance groups and utilizing a Load Balancer, you can increase the number of virtual machines and distribute traffic evenly.
 
 ## Scaling Kubernetes Clusters
 
 ### Vertical Scaling
-- **In Live Mode:** 
+
+- **In Live Mode:**
   Resource adjustments for cluster nodes are not possible.
-- **In Stopped Mode:** 
+- **In Stopped Mode:**
   You can increase or decrease the resources for each node.
 
 ### Horizontal Scaling
-- **In Live Mode:** 
+
+- **In Live Mode:**
   Adjust the number of cluster nodes to meet capacity needs.
 
 ## Summary Table of Scaling in Virak Panel
 
-| Service Type      | Scaling Type       | In Live Mode                   | In Stopped Mode                 |
-|--------------------|--------------------|---------------------------------|----------------------------------|
-| Virtual Machines   | Vertical          | Scale Up (Scale Down not possible) | Full resource scaling available |
-|                    | Horizontal         | Adjust the number of machines  | Adjust the number of machines   |
-| Kubernetes Clusters| Vertical          | Not possible                   | Adjust node resources           |
-|                    | Horizontal         | Adjust the number of nodes     | Adjust the number of nodes      |
+| Service Type        | Scaling Type | In Live Mode                       | In Stopped Mode                 |
+| ------------------- | ------------ | ---------------------------------- | ------------------------------- |
+| Virtual Machines    | Vertical     | Scale Up (Scale Down not possible) | Full resource scaling available |
+|                     | Horizontal   | Adjust the number of machines      | Adjust the number of machines   |
+| Kubernetes Clusters | Vertical     | Not possible                       | Adjust node resources           |
+|                     | Horizontal   | Adjust the number of nodes         | Adjust the number of nodes      |
 
 ## Key Points for Decision-Making
 
@@ -53,10 +55,12 @@ By creating instance groups and utilizing a Load Balancer, you can increase the 
 ## Practical Examples
 
 ### Virtual Machines (VMs)
+
 - **Scaling Up in Live Mode:** Quickly increase CPU and RAM resources during traffic spikes.
 - **Scaling Down:** Reduce costs by stopping the machine and decreasing resources during low-traffic periods.
 
 ### Kubernetes Clusters
+
 - **Adding Nodes:** Increase the number of nodes in live mode to handle higher workloads.
 - **Changing Node Resources:** Stop the cluster to adjust resources for each node.
 
@@ -78,6 +82,7 @@ By creating instance groups and utilizing a Load Balancer, you can increase the 
    No, the Virak Panel automatically integrates new nodes into the cluster.
 
 ## Contact Support
+
 For further assistance, contact the Virak support team. We are always ready to help.
 
 ---
