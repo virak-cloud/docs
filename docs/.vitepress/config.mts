@@ -201,6 +201,28 @@ export default defineConfig({
                 collapsed: true
               },
               {
+                text: 'دیتابیس ابری',
+                items: [
+                  {
+                    text: 'معرفی سرویس',
+                    link: '/fa/guides/database/index'
+                  },
+                  {
+                    text: 'لیست پروژه ها',
+                    link: '/fa/guides/database/namespace-list'
+                  },
+                  {
+                    text: 'ایجاد پروژه و دیتابیس',
+                    link: '/fa/guides/database/create'
+                  },
+                  {
+                    text: 'جزئیات دیتابیس',
+                    link: '/fa/guides/database/details'
+                  }
+                ],
+                collapsed: true
+              },
+              {
                 text: 'شبکه های مجازی',
                 items: [
                   {
@@ -373,6 +395,28 @@ export default defineConfig({
                   {
                     text: 'Cluster Details',
                     link: '/en/guides/kubernetes/details'
+                  }
+                ],
+                collapsed: true
+              },
+              {
+                text: 'Managed Database',
+                items: [
+                  {
+                    text: 'Introduction',
+                    link: '/en/guides/database/index'
+                  },
+                  {
+                    text: 'List of Namespaces',
+                    link: '/en/guides/database/namespace-list'
+                  },
+                  {
+                    text: 'Create a Project and Database',
+                    link: '/en/guides/database/create'
+                  },
+                  {
+                    text: 'Database Details',
+                    link: '/en/guides/database/details'
                   }
                 ],
                 collapsed: true
