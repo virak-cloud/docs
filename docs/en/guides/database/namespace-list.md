@@ -24,7 +24,7 @@ For each namespace, the following information is displayed:
 
 Each namespace has the following actions available:
 
-- **View Details**: Opens the list of databases inside this namespace.
+- **View Details**: Opens the [list of databases](./database-list.md) inside this namespace.
 - **Manage Backup Storage**: Connects or removes the storage used for automatic/manual database backups within this namespace.
 - **Delete**: Permanently deletes the namespace.
 

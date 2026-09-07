@@ -212,7 +212,11 @@ export default defineConfig({
                     link: '/fa/guides/database/namespace-list'
                   },
                   {
-                    text: 'ایجاد پروژه و دیتابیس',
+                    text: 'لیست دیتابیس ها',
+                    link: '/fa/guides/database/database-list'
+                  },
+                  {
+                    text: 'ایجاد دیتابیس',
                     link: '/fa/guides/database/create'
                   },
                   {
@@ -411,7 +415,11 @@ export default defineConfig({
                     link: '/en/guides/database/namespace-list'
                   },
                   {
-                    text: 'Create a Project and Database',
+                    text: 'List of Databases',
+                    link: '/en/guides/database/database-list'
+                  },
+                  {
+                    text: 'Create Database',
                     link: '/en/guides/database/create'
                   },
                   {
