@@ -14,7 +14,6 @@ In the [Payments section](https://panel.virakcloud.com/accounting/payment/list#l
 
 In the second tab, you can also view the status of your last payment.
 
-
 <DarkModeImage
   dark-src="/images/guides/en/dark/accounting/last-payment.webp"
   light-src="/images/guides/en/light/accounting/last-payment.webp"

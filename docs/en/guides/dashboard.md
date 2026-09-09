@@ -1,7 +1,9 @@
 # Dashboard
 
 ## Main Page Information
+
 After logging into the [panel](https://panel.virakcloud.com/), you can view the following information on the main page:
+
 - Total memory and used memory
 - Total CPU and used CPU
 - Total disk space and used disk space
@@ -14,6 +16,7 @@ After logging into the [panel](https://panel.virakcloud.com/), you can view the 
 />
 
 ## Account Charge
+
 On the left side of the panel, you can view your panel's charge balance. If you need to increase your panel's charge balance, you can make a deposit in this section.
 
 <DarkModeImage
@@ -23,6 +26,7 @@ On the left side of the panel, you can view your panel's charge balance. If you 
 />
 
 ## Sidebar Links
+
 As shown in the image below, you can see the main dashboard on the left side of the panel, which includes the following:
 
 1. Cloud Infrastructure Hosting

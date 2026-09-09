@@ -2,7 +2,6 @@
 
 در این قسمت کاربر می‌تواند سرور ابری ساخته شده را مدیریت و وضعیت تمامی ریسورس‌ها را مانیتور و مشاهده نماید.
 
-
 <DarkModeImage
   dark-src="/images/guides/fa/dark/instances/instance-details.webp"
   light-src="/images/guides/fa/light/instances/instance-details.webp"

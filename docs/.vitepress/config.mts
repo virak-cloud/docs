@@ -1,17 +1,18 @@
 import { defineConfig } from 'vitepress'
 import rtlcss from 'rtlcss'
-import dotenv from 'dotenv';
-import path from 'path';
+import dotenv from 'dotenv'
+import path from 'path'
 
 // Manually load the correct .env file based on your build mode
 dotenv.config({
-  path: path.resolve(process.cwd(), process.env.BUILD_ENV === 'production'
-    ? '.env.master'
-    : '.env.dev')
-});
+  path: path.resolve(
+    process.cwd(),
+    process.env.BUILD_ENV === 'production' ? '.env.master' : '.env.dev'
+  )
+})
 
-
-const github_link_url = 'https://github.com/virak-cloud/docs/edit/master/docs/:path'
+const github_link_url =
+  'https://github.com/virak-cloud/docs/edit/master/docs/:path'
 
 export default defineConfig({
   lang: 'fa-IR',
@@ -27,15 +28,13 @@ export default defineConfig({
         type: 'image/x-icon',
         href: '/favicon.ico'
       }
-    ],
+    ]
     // ['meta', { name: 'robots', content: 'noindex, nofollow' }],
   ],
   vite: {
     css: {
       postcss: {
-        plugins: [
-          rtlcss()
-        ]
+        plugins: [rtlcss()]
       }
     }
   },
@@ -67,7 +66,7 @@ export default defineConfig({
                 footer: {
                   selectText: 'انتخاب کنید',
                   navigateText: 'پیمایش کنید',
-                  closeText: 'بستن',
+                  closeText: 'بستن'
                 }
               }
             }
@@ -101,7 +100,8 @@ export default defineConfig({
       {
         icon: 'linkedin',
         link: 'https://www.linkedin.com/in/virak-cloud-a39598264/'
-      }, {
+      },
+      {
         icon: 'twitter',
         link: 'https://twitter.com/virakcloud'
       },
@@ -110,7 +110,7 @@ export default defineConfig({
           svg: `<svg fill="currentColor" width="800px" height="800px" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg"><path d="M12.001 1.594c-9.27-.003-13.913 11.203-7.36 17.758a10.403 10.403 0 0 0 17.76-7.355c0-5.744-4.655-10.401-10.4-10.403zM6.11 6.783c.501-2.598 3.893-3.294 5.376-1.103 1.483 2.19-.422 5.082-3.02 4.582A2.97 2.97 0 0 1 6.11 6.783zm4.322 8.988c-.504 2.597-3.897 3.288-5.377 1.096-1.48-2.192.427-5.08 3.025-4.579a2.97 2.97 0 0 1 2.352 3.483zm1.26-2.405c-1.152-.223-1.462-1.727-.491-2.387.97-.66 2.256.18 2.04 1.334a1.32 1.32 0 0 1-1.548 1.053zm6.198 3.838c-.501 2.598-3.893 3.293-5.376 1.103-1.484-2.191.421-5.082 3.02-4.583a2.97 2.97 0 0 1 2.356 3.48zm-1.967-5.502c-2.598-.501-3.293-3.896-1.102-5.38 2.19-1.483 5.081.422 4.582 3.02a2.97 2.97 0 0 1-3.48 2.36zM13.59 23.264l2.264.61a3.715 3.715 0 0 0 4.543-2.636l.64-2.402a11.383 11.383 0 0 1-7.448 4.428zm7.643-19.665L18.87 2.97a11.376 11.376 0 0 1 4.354 7.62l.65-2.459A3.715 3.715 0 0 0 21.231 3.6zM.672 13.809l-.541 2.04a3.715 3.715 0 0 0 2.636 4.543l2.107.562a11.38 11.38 0 0 1-4.203-7.145zM10.357.702 8.15.126a3.715 3.715 0 0 0-4.547 2.637l-.551 2.082A11.376 11.376 0 0 1 10.358.702z"/></svg>`
         },
         link: 'https://www.aparat.com/virak'
-      },
+      }
     ]
   },
   locales: {
@@ -168,7 +168,7 @@ export default defineConfig({
                   {
                     text: 'بازارچه',
                     link: '/fa/guides/instances/create/marketplace'
-                  },
+                  }
                 ],
                 collapsed: true
               },
@@ -196,7 +196,33 @@ export default defineConfig({
                   {
                     text: 'جزئیات کلاستر',
                     link: '/fa/guides/kubernetes/details'
+                  }
+                ],
+                collapsed: true
+              },
+              {
+                text: 'دیتابیس ابری',
+                items: [
+                  {
+                    text: 'معرفی سرویس',
+                    link: '/fa/guides/database/index'
                   },
+                  {
+                    text: 'لیست پروژه ها',
+                    link: '/fa/guides/database/namespace-list'
+                  },
+                  {
+                    text: 'لیست دیتابیس ها',
+                    link: '/fa/guides/database/database-list'
+                  },
+                  {
+                    text: 'ایجاد دیتابیس',
+                    link: '/fa/guides/database/create'
+                  },
+                  {
+                    text: 'جزئیات دیتابیس',
+                    link: '/fa/guides/database/details'
+                  }
                 ],
                 collapsed: true
               },
@@ -206,35 +232,38 @@ export default defineConfig({
                   {
                     text: 'لیست شبکه ها',
                     link: '/fa/guides/networks/list',
-                    items: [{
-                      text: 'جزئیات شبکه',
-                      items: [
-                        {
-                          text: 'پیکربندی شبکه',
-                          link: '/fa/guides/networks/details/config'
-                        },
-                        {
-                          text: 'سرورهای متصل',
-                          link: '/fa/guides/networks/details/connected-instances'
-                        },
-                        {
-                          text: 'فایروال های v4 , v6',
-                          link: '/fa/guides/networks/details/firewall'
-                        },
-                        {
-                          text: 'انتقال پورت',
-                          link: '/fa/guides/networks/details/port-forward'
-                        },
-                        {
-                          text: 'توزیع بار',
-                          link: '/fa/guides/networks/details/load-balance'
-                        }, {
-                          text: 'VPN',
-                          link: '/fa/guides/networks/details/vpn'
-                        },
-                      ],
-                      collapsed: true
-                    }]
+                    items: [
+                      {
+                        text: 'جزئیات شبکه',
+                        items: [
+                          {
+                            text: 'پیکربندی شبکه',
+                            link: '/fa/guides/networks/details/config'
+                          },
+                          {
+                            text: 'سرورهای متصل',
+                            link: '/fa/guides/networks/details/connected-instances'
+                          },
+                          {
+                            text: 'فایروال های v4 , v6',
+                            link: '/fa/guides/networks/details/firewall'
+                          },
+                          {
+                            text: 'انتقال پورت',
+                            link: '/fa/guides/networks/details/port-forward'
+                          },
+                          {
+                            text: 'توزیع بار',
+                            link: '/fa/guides/networks/details/load-balance'
+                          },
+                          {
+                            text: 'VPN',
+                            link: '/fa/guides/networks/details/vpn'
+                          }
+                        ],
+                        collapsed: true
+                      }
+                    ]
                   },
                   {
                     text: 'نقشه شبکه',
@@ -244,7 +273,6 @@ export default defineConfig({
                     text: 'ایجاد شبکه',
                     link: '/fa/guides/networks/create'
                   }
-
                 ],
                 collapsed: true
               },
@@ -266,9 +294,9 @@ export default defineConfig({
                   {
                     text: 'هدایا',
                     link: '/fa/guides/accounting/gifts'
-                  },
+                  }
                 ],
-                collapsed: true,
+                collapsed: true
               },
               {
                 text: 'پشتیبانی',
@@ -284,9 +312,9 @@ export default defineConfig({
                   {
                     text: 'بسته های پشتیبانی',
                     link: '/fa/guides/tickets/plans'
-                  },
+                  }
                 ],
-                collapsed: true,
+                collapsed: true
               },
               {
                 text: 'وب سرویس ها',
@@ -296,10 +324,10 @@ export default defineConfig({
                 text: 'گزارش تغییرات',
                 link: '/fa/guides/changelogs'
               }
-
-            ],
-          }],
-      },
+            ]
+          }
+        ]
+      }
     },
     en: {
       label: 'English',
@@ -320,7 +348,10 @@ export default defineConfig({
             text: 'User Guide',
             items: [
               { text: 'Sign Up', link: '/en/guides/user/register' },
-              { text: 'Authentication', link: '/en/guides/user/authentication' },
+              {
+                text: 'Authentication',
+                link: '/en/guides/user/authentication'
+              },
               { text: 'Dashboard', link: '/en/guides/dashboard' },
               {
                 text: 'Cloud Infrastructure Hosting',
@@ -340,7 +371,7 @@ export default defineConfig({
                   {
                     text: 'Marketplace',
                     link: '/en/guides/instances/create/marketplace'
-                  },
+                  }
                 ],
                 collapsed: true
               },
@@ -368,7 +399,33 @@ export default defineConfig({
                   {
                     text: 'Cluster Details',
                     link: '/en/guides/kubernetes/details'
+                  }
+                ],
+                collapsed: true
+              },
+              {
+                text: 'Managed Database',
+                items: [
+                  {
+                    text: 'Introduction',
+                    link: '/en/guides/database/index'
                   },
+                  {
+                    text: 'List of Namespaces',
+                    link: '/en/guides/database/namespace-list'
+                  },
+                  {
+                    text: 'List of Databases',
+                    link: '/en/guides/database/database-list'
+                  },
+                  {
+                    text: 'Create Database',
+                    link: '/en/guides/database/create'
+                  },
+                  {
+                    text: 'Database Details',
+                    link: '/en/guides/database/details'
+                  }
                 ],
                 collapsed: true
               },
@@ -378,36 +435,38 @@ export default defineConfig({
                   {
                     text: 'List of Networks',
                     link: '/en/guides/networks/list',
-                    items: [{
-                      text: 'Network Details',
-                      items: [
-                        {
-                          text: 'Network Configuration',
-                          link: '/en/guides/networks/details/config'
-                        },
-                        {
-                          text: 'Connected Cloud Instances',
-                          link: '/en/guides/networks/details/connected-instances'
-                        },
-                        {
-                          text: 'Firewalls (v4, v6)',
-                          link: '/en/guides/networks/details/firewall'
-                        },
-                        {
-                          text: 'Port Forwarding',
-                          link: '/en/guides/networks/details/port-forward'
-                        },
-                        {
-                          text: 'Load Balancing',
-                          link: '/en/guides/networks/details/load-balance'
-                        },
-                        {
-                          text: 'VPN',
-                          link: '/en/guides/networks/details/vpn'
-                        }
-                      ],
-                      collapsed: true
-                    }]
+                    items: [
+                      {
+                        text: 'Network Details',
+                        items: [
+                          {
+                            text: 'Network Configuration',
+                            link: '/en/guides/networks/details/config'
+                          },
+                          {
+                            text: 'Connected Cloud Instances',
+                            link: '/en/guides/networks/details/connected-instances'
+                          },
+                          {
+                            text: 'Firewalls (v4, v6)',
+                            link: '/en/guides/networks/details/firewall'
+                          },
+                          {
+                            text: 'Port Forwarding',
+                            link: '/en/guides/networks/details/port-forward'
+                          },
+                          {
+                            text: 'Load Balancing',
+                            link: '/en/guides/networks/details/load-balance'
+                          },
+                          {
+                            text: 'VPN',
+                            link: '/en/guides/networks/details/vpn'
+                          }
+                        ],
+                        collapsed: true
+                      }
+                    ]
                   },
                   {
                     text: 'Network Map',
@@ -470,7 +529,7 @@ export default defineConfig({
               }
             ]
           }
-        ],
+        ]
       }
     }
   }

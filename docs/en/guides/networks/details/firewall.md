@@ -8,10 +8,9 @@ The rules have priority, and for increased security, a no-access rule is created
 Overlapping rules will not be created and will generate a warning.
 :::
 
-
 ## Add Firewall
-In this section, you can create your desired firewall.
 
+In this section, you can create your desired firewall.
 
 <DarkModeImage
   dark-src="/images/guides/en/dark/networks/add-firewall.webp"
@@ -20,6 +19,7 @@ In this section, you can create your desired firewall.
 />
 
 Users can create rules for inbound and outbound traffic permissions by selecting the following components:
+
 - Traffic type
 - Protocol type
 - Open ports

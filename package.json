@@ -1,22 +1,25 @@
 {
   "devDependencies": {
-    "@types/node": "^22.7.7",
+    "@types/node": "^26.4.1",
     "@types/rtlcss": "^3.5.4",
-    "dotenv": "^16.4.5",
+    "dotenv": "^17.4.2",
     "medium-zoom": "^1.1.0",
+    "prettier": "^3.9.6",
     "rtlcss": "^4.3.0",
-    "sass": "^1.80.3",
+    "sass": "^1.103.1",
     "typescript": "^5.4.5",
-    "vitepress": "^1.4.0"
+    "vitepress": "^1.6.4"
   },
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "BUILD_ENV=development vitepress build docs",
     "docs:build:master": "BUILD_ENV=production vitepress build docs --mode master",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "prettier:check": "prettier --check .",
+    "prettier:fix": "prettier . --write"
   },
   "dependencies": {
     "vitepress-plugin-google-analytics": "^1.0.2",
-    "vue": "^3.5.12"
+    "vue": "^3.5.42"
   }
 }

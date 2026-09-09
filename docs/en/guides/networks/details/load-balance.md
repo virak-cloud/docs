@@ -9,7 +9,9 @@ The load balancing feature allows traffic to be sent to internal network service
 />
 
 ## Creating Load Balancing
+
 This feature works by adding load balancing and selecting the following components, which adds a new entry for it:
+
 - Name
 - Algorithm
 - Public IP
@@ -28,7 +30,9 @@ After completion, incoming traffic to the public IP will be distributed to the i
 <!-- todo: also we can explain about rules of load-balance  -->
 
 ## Live Report
+
 In the live report menu, you can monitor the performance of the load balancing service and the instances providing the service behind the load balancing service in real-time, along with measuring incoming and outgoing traffic and response codes.
 
 ## History
+
 The history menu also keeps a historical record of the services' performance.

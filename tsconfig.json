@@ -12,13 +12,9 @@
     "skipLibCheck": true,
     "jsx": "preserve",
     "baseUrl": ".",
-    "types": [
-       "node"
-      ],
+    "types": ["node"],
     "paths": {
-      "@theme/*": [
-        ".vitepress/theme/*"
-      ]
+      "@theme/*": [".vitepress/theme/*"]
     }
   },
   "include": [
@@ -26,9 +22,9 @@
     "docs/.vitepress/**/*",
     "docs/**/*.ts",
     "docs/**/*.vue",
-    "docs/**/*.md",
+    "docs/**/*.md"
   ],
   "vueCompilerOptions": {
-    "vitePressExtensions": [".md"],
-  },
+    "vitePressExtensions": [".md"]
+  }
 }

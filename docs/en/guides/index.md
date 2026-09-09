@@ -37,6 +37,10 @@ features:
     title: Object Storage
     details: Scalable S3-compatible object storage with bucket management, access keys, and file navigation.
 
+  - icon: 🗄️
+    title: Managed Database
+    details: Create and manage PostgreSQL, MySQL, and MongoDB databases inside projects, with instant scaling, scheduled backups, and real-time monitoring.
+
   - icon: ☸️
     title: Managed Kubernetes
     details: Launch scalable, high-availability Kubernetes clusters with auto-scaling, access credentials, and kubectl configuration.
@@ -48,5 +52,4 @@ features:
   - icon: 📩
     title: Integrated Support & Ticketing
     details: Submit, track, and manage support requests—technical or billing—all through an easy-to-use ticket interface.
-
 ---
