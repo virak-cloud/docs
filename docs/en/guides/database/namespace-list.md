@@ -52,8 +52,7 @@ In the dialog that opens, enter a name for the namespace. As you type, the panel
 
 Each rule turns green once satisfied. Once all the rules are met, the **Confirm** button becomes enabled. Click **Confirm** to create the namespace.
 
-
-## Backup Storage ​
+## Backup Storage ​{#backup-stoage}
 
 Every namespace can be connected to a single storage bucket. Once connected, all databases inside that namespace automatically save their backups to this bucket — you do not need to configure backup storage separately for each database.
 
