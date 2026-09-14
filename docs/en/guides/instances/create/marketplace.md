@@ -28,8 +28,8 @@ This name is mapped to your instance’s address and enables you to connect to i
    Thanks to the FQDN and configuration provided by the template, the service receives a valid SSL certificate via Let's Encrypt.
 
 <DarkModeImage
-  dark-src="/images/guides/common/instance/marketplace/2-Lets-Encrypt-SSL.png"
-  light-src="/images/guides/common/instance/marketplace/2-Lets-Encrypt-SSL.png"
+  dark-src="/images/guides/common/instance/marketplace/2-Lets-Encrypt-SSL.webp"
+  light-src="/images/guides/common/instance/marketplace/2-Lets-Encrypt-SSL.webp"
   alt="Marketplace - Ready to use Applications"
 />
 
@@ -61,20 +61,20 @@ These may include DB username/password, admin panel login credentials, email add
 :::
 
 <DarkModeImage
-  dark-src="/images/guides/common/instance/marketplace/4-mqSql.png"
-  light-src="/images/guides/common/instance/marketplace/4-mqSql.png"
+  dark-src="/images/guides/common/instance/marketplace/4-mqSql.webp"
+  light-src="/images/guides/common/instance/marketplace/4-mqSql.webp"
   alt="Marketplace - Ready to use Applications"
 />
 <br/>
 <DarkModeImage
-  dark-src="/images/guides/common/instance/marketplace/5-rootPassword.png"
-  light-src="/images/guides/common/instance/marketplace/5-rootPassword.png"
+  dark-src="/images/guides/common/instance/marketplace/5-rootPassword.webp"
+  light-src="/images/guides/common/instance/marketplace/5-rootPassword.webp"
   alt="Marketplace - Ready to use Applications"
 />
 <br/>
 <DarkModeImage
-  dark-src="/images/guides/common/instance/marketplace/6-wordpressPassword.png"
-  light-src="/images/guides/common/instance/marketplace/6-wordpressPassword.png"
+  dark-src="/images/guides/common/instance/marketplace/6-wordpressPassword.webp"
+  light-src="/images/guides/common/instance/marketplace/6-wordpressPassword.webp"
   alt="Marketplace - Ready to use Applications"
 />
 
@@ -86,8 +86,8 @@ After entering the required info, you will be shown a summary page with credenti
 For example, the image below displays access info for the WordPress web page, Webmin, Adminer, and SSH access.
 
 <DarkModeImage
-  dark-src="/images/guides/common/instance/marketplace/7-wordpress-config.png"
-  light-src="/images/guides/common/instance/marketplace/7-wordpress-config.png"
+  dark-src="/images/guides/common/instance/marketplace/7-wordpress-config.webp"
+  light-src="/images/guides/common/instance/marketplace/7-wordpress-config.webp"
   alt="Marketplace - Ready to use Applications"
 />
 
@@ -150,13 +150,13 @@ Adminer is a lightweight, single-file, open-source database management tool (oft
 The following image shows the WordPress login page at: `http://85.9.104.4/wp-admin`
 
 <DarkModeImage
-  dark-src="/images/guides/common/instance/marketplace/10-wordpress-login.png"
-  light-src="/images/guides/common/instance/marketplace/10-wordpress-login.png"
+  dark-src="/images/guides/common/instance/marketplace/10-wordpress-login.webp"
+  light-src="/images/guides/common/instance/marketplace/10-wordpress-login.webp"
   alt="Marketplace - Ready to use Applications"
 />
 <br/>
 <DarkModeImage
-  dark-src="/images/guides/common/instance/marketplace/11-wordpress-dashboard.png"
-  light-src="/images/guides/common/instance/marketplace/11-wordpress-dashboard.png"
+  dark-src="/images/guides/common/instance/marketplace/11-wordpress-dashboard.webp"
+  light-src="/images/guides/common/instance/marketplace/11-wordpress-dashboard.webp"
   alt="Marketplace - Ready to use Applications"
 />

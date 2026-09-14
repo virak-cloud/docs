@@ -26,8 +26,8 @@
    با توجه به دریافت FQDN و پیکربندی های انجام شده در تمپلیت، سرویس مورد نظر از طریق Let's Encrypt یک SSL معتبر دریافت خواهد کرد.
 
 <DarkModeImage
-  dark-src="/images/guides/common/instance/marketplace/2-Lets-Encrypt-SSL.png"
-  light-src="/images/guides/common/instance/marketplace/2-Lets-Encrypt-SSL.png"
+  dark-src="/images/guides/common/instance/marketplace/2-Lets-Encrypt-SSL.webp"
+  light-src="/images/guides/common/instance/marketplace/2-Lets-Encrypt-SSL.webp"
   alt="Marketplace - Ready to use Applications"
 />
 
@@ -57,20 +57,20 @@
 :::
 
 <DarkModeImage
-  dark-src="/images/guides/common/instance/marketplace/4-mqSql.png"
-  light-src="/images/guides/common/instance/marketplace/4-mqSql.png"
+  dark-src="/images/guides/common/instance/marketplace/4-mqSql.webp"
+  light-src="/images/guides/common/instance/marketplace/4-mqSql.webp"
   alt="Marketplace - Ready to use Applications"
 />
 <br/>
 <DarkModeImage
-  dark-src="/images/guides/common/instance/marketplace/5-rootPassword.png"
-  light-src="/images/guides/common/instance/marketplace/5-rootPassword.png"
+  dark-src="/images/guides/common/instance/marketplace/5-rootPassword.webp"
+  light-src="/images/guides/common/instance/marketplace/5-rootPassword.webp"
   alt="Marketplace - Ready to use Applications"
 />
 <br/>
 <DarkModeImage
-  dark-src="/images/guides/common/instance/marketplace/6-wordpressPassword.png"
-  light-src="/images/guides/common/instance/marketplace/6-wordpressPassword.png"
+  dark-src="/images/guides/common/instance/marketplace/6-wordpressPassword.webp"
+  light-src="/images/guides/common/instance/marketplace/6-wordpressPassword.webp"
   alt="Marketplace - Ready to use Applications"
 />
 
@@ -82,8 +82,8 @@
 به عنوان مثال در شکل زیر اطلاعات ورود به صفحه اصلی وب WordPress ، Webmin جهت پیکربندی سرور به صورت تحت وب، Adminer جهت اتصال به دیتابیس، و همچنین SSH جهت انصال به سرور ارائه داده شده است.
 
 <DarkModeImage
-  dark-src="/images/guides/common/instance/marketplace/7-wordpress-config.png"
-  light-src="/images/guides/common/instance/marketplace/7-wordpress-config.png"
+  dark-src="/images/guides/common/instance/marketplace/7-wordpress-config.webp"
+  light-src="/images/guides/common/instance/marketplace/7-wordpress-config.webp"
   alt="Marketplace - Ready to use Applications"
 />
 
@@ -146,13 +146,13 @@
 تصویر زیر هم صفحه ورود به بخش `http://85.9.104.4/wp-admin` سرویس ورد پرس را نشان میدهد.
 
 <DarkModeImage
-  dark-src="/images/guides/common/instance/marketplace/10-wordpress-login.png"
-  light-src="/images/guides/common/instance/marketplace/10-wordpress-login.png"
+  dark-src="/images/guides/common/instance/marketplace/10-wordpress-login.webp"
+  light-src="/images/guides/common/instance/marketplace/10-wordpress-login.webp"
   alt="Marketplace - Ready to use Applications"
 />
 <br/>
 <DarkModeImage
-  dark-src="/images/guides/common/instance/marketplace/11-wordpress-dashboard.png"
-  light-src="/images/guides/common/instance/marketplace/11-wordpress-dashboard.png"
+  dark-src="/images/guides/common/instance/marketplace/11-wordpress-dashboard.webp"
+  light-src="/images/guides/common/instance/marketplace/11-wordpress-dashboard.webp"
   alt="Marketplace - Ready to use Applications"
 />
