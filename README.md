@@ -21,7 +21,7 @@ This repository powers [docs.virakcloud.com](https://docs.virakcloud.com), built
 - Vue 3 (`<script setup>`)
 - TypeScript
 - [rtlcss](https://rtlcss.com/) for RTL stylesheet generation
-- [sharp](https://sharp.pixelplumb.com/) for image conversion/optimization
+- [sharp](https://www.npmjs.com/package/sharp) for image conversion/optimization
 - dotenv for environment-based configuration
 
 ## Prerequisites
