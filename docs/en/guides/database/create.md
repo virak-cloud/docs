@@ -31,7 +31,7 @@ Choose a hardware plan based on the resources your database needs. Three plans a
 - CPU cores
 - Memory (RAM)
 - Disk space (NVMe)
-- Currently active connections supported
+- **Max Concurrent Connections**: the highest number of active connections (from applications, services, or admin tools) that can be open to this database at the same time. This limit depends on the plan's resources (CPU and memory) — if your application's concurrent connections exceed this number, new connection attempts may fail or be queued. If your application has high traffic or multiple services connecting simultaneously, choose a plan with a higher connection limit.
 - Hourly price (per node)
 - Estimated monthly price
 
