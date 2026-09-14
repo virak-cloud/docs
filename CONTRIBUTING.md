@@ -4,7 +4,7 @@
 - [Adding a New Guide Page](#adding-images-framed_picture)
 - [Optimizing Images](#optimizing-images-gear)
 - [Running the Development Server](#running-the-development-server-rocket)
-- [Building for Production](#building-for-production)
+- [Building for Production](#building-for-production-hammer_and_wrench)
 
 Thank you for your interest in contributing to the VirakCloud Documentation! This guide will walk you through the steps to add new pages, use images, configure paths, and manage comments effectively.
 
