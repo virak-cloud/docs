@@ -1,23 +1,14 @@
 # Contributing to VirakCloud :cloud: Documentation
 
-:link:
-
-## Table of Contents
-
 - [Getting Started](#getting-started)
-- [Project Structure](#project-structure)
-- [Adding a Guide Page](#adding-page)
-- [Adding Images](#adding-images)
+- [Adding a New Guide Page](#adding-page)
+- [Optimizing Images](#optimizing-images)
 - [Running the Development Server](#run-on-dev)
 - [Building for Production](#building-for-production)
 
 Thank you for your interest in contributing to the VirakCloud Documentation! This guide will walk you through the steps to add new pages, use images, configure paths, and manage comments effectively.
 
-## Getting Started :wave: { #getting-started }
-
-To get started, clone the repository and install the dependencies. You can use your preferred package manager:
-
-### Clone repository to your local machine
+## Getting Started :wave:
 
 ```bash
 git clone <repository-url>
@@ -44,12 +35,12 @@ yarn install
 pnpm i
 ```
 
-## Project Structure :file_folder: { #project-structure }
+### Project Structure
 
 - **`docs/`**: Contains all the documentation files, organized by language and section.
 - **`docs/.vitepress`**: Configuration files for VitePress, including themes, plugins, and customization options.
 
-## Adding a New Guide Page :page_facing_up: { #adding-page }
+## Adding a New Guide Page :page_facing_up:
 
 To add a new guide page:
 
@@ -60,13 +51,14 @@ To add a new guide page:
    ```markdown
    ---
    title: عنوان صفحه
-   description: توضیحات صفحه
+   description: توضیح کوتاه صفحه
    ---
    ```
-   - **title**: The title of your page.
+
+   - **title**: Sets the page title displayed in the browser tab and used for SEO.
    - **description**: A brief description that will appear in search engines and social previews.
 
-4. **Add Content**: Write your content in markdown. Here’s a sample layout:
+4. **Add Content**: Write your content in markdown. Here's a sample layout:
 
    ```markdown
    # Page Title
@@ -82,30 +74,87 @@ To add a new guide page:
    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
    ```
 
-5. **Link the Page**: If you want to add navigation to the new page, edit the sidebar configuration in `docs/.vitepress/config.ts`.
+5. **Link the Page**: If you want to add navigation to the new page, edit the sidebar configuration in `docs/.vitepress/config.mts`.
 
-## Adding Images :framed_picture: {#adding-images}
+### Adding Images :framed_picture:
 
 To add images:
 
-1. **Place the Image**: Save your image in the `docs/public/images` folder to keep assets organized.
+1. **Place the Image File**: Save it under `docs/public/images/...`, following the existing folder structure (organized by language and section, with separate `light` and `dark` subfolders for theme-aware screenshots).
 
-> **:bulb: Note:** The site supports two languages (Persian and English) and two themes (dark and light). When adding images, make sure to provide appropriate versions for both languages and themes if necessary to ensure a consistent user experience.
-
-> **:warning: Note:** Please ensure that images are in WEBP format and optimized to the maximum extent before uploading. For best results, images should be sized between 700 and 1200 pixels. Optimized images will help improve loading times and enhance the overall performance of the website.
+> **:warning: Note:** Images must be in WEBP format before they are committed. Use the [image optimization script](#optimizing-images) below to convert and compress screenshots automatically — do not add raw `.jpg`/`.png` files to a PR.
 
 2. **Use in Markdown**:
+
    ```markdown
    ![Alt text](../../images/filename.webp)
    ```
 
-### :new_moon: Dark Mode Images
-
-If you need different images for dark mode, use the `<DarkModeImage />` component:
+If you need different images for dark mode, use the `<DarkModeImage />` component instead of a plain Markdown image tag:
 
 ```markdown
-<DarkModeImage src="image-light.webp" dark-src="image-dark.webp" alt="Alt text" />
+<DarkModeImage
+  dark-src="/images/guides/en/dark/section/filename.webp"
+  light-src="/images/guides/en/light/section/filename.webp"
+  alt="Description of the screenshot"
+/>
 ```
+
+## Optimizing Images :gear:
+
+This repository includes a script, `scripts/optimize-images.mjs`, that converts screenshots to WebP and (optionally) keeps every Markdown reference to those images up to date automatically. Use it any time you add new screenshots, instead of converting images manually.
+
+### Requirements
+
+The script depends on [`sharp`](https://www.npmjs.com/package/sharp), already listed as a dev dependency. If you haven't run `npm install` (or the yarn/pnpm equivalent) yet, do that first.
+
+### Basic Usage
+
+Run it against the folder containing your new images:
+
+```bash
+npm run images:optimize
+```
+
+This runs the script with its default target (`docs/public/images/guides`) and:
+
+- Converts every `.jpg`/`.jpeg`/`.png` file found (recursively) to **lossless** WebP.
+- Keeps the original image dimensions — nothing is resized by default.
+- Deletes the original file after a successful conversion.
+- Automatically rewrites any `dark-src`/`light-src`/Markdown image path in `docs/**/*.md` that pointed to the old file, so you don't have to update `.md` files by hand.
+- Skips any file where the WebP result would not actually be smaller than the original, leaving that file untouched.
+
+### Running It Manually with Custom Options
+
+If you want to convert a specific subfolder or override the defaults, call the script directly:
+
+```bash
+node scripts/optimize-images.mjs <path-to-folder> [options]
+```
+
+Available options:
+
+| Flag                  | Description                                                                                                                 | Default                                                       |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| `--max-width=<n>`     | Resize images wider than `<n>`px before encoding.                                                                           | Disabled — original size is always kept unless you pass this. |
+| `--quality=<n>`       | Use lossy WebP at quality `<n>` instead of lossless.                                                                        | Lossless                                                      |
+| `--delete-original`   | Remove the source `.jpg`/`.png` after conversion.                                                                           | Off (originals are kept)                                      |
+| `--update-refs=<dir>` | Scan all `.md` files under `<dir>` and rewrite image paths after conversion. Only useful together with `--delete-original`. | Off                                                           |
+
+Example — convert only the database guide's screenshots and update every reference under `docs`:
+
+```bash
+node scripts/optimize-images.mjs docs/public/images/guides/en/dark/database \
+  --delete-original --update-refs=docs
+```
+
+### Verifying the Result
+
+After running the script:
+
+1. Check the console output — each converted file reports its size before/after and the compression mode used (`lossless` or `quality=<n>`).
+2. Run `git status` / `git diff` to confirm only the expected image and `.md` files changed.
+3. Start the dev server (`npm run docs:dev`) and open the affected pages to confirm the screenshots still render correctly.
 
 ## Running the Development Server :rocket: {#run-on-dev}
 
