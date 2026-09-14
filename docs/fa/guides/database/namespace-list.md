@@ -5,8 +5,8 @@
 در [این بخش](https://panel.virakcloud.com/dbaas)، می‌توانید تمام پروژه‌هایی که برای سرویس دیتابیس ساخته‌اید را مشاهده کنید. پروژه یک فضای کاری است که دیتابیس‌های مرتبط با یک اپلیکیشن یا تیم را کنار هم نگه می‌دارد.
 
 <DarkModeImage
-  dark-src="/images/guides/fa/dark/database/namespace-list.png"
-  light-src="/images/guides/fa/light/database/namespace-list.png"
+  dark-src="/images/guides/fa/dark/database/namespace-list.webp"
+  light-src="/images/guides/fa/light/database/namespace-list.webp"
   alt="لیست پروژه‌ها"
 />
 
@@ -37,8 +37,8 @@
 برای ساخت پروژه جدید، روی دکمه **ایجاد پروژه** در بالای لیست پروژه‌ها کلیک کنید.
 
 <DarkModeImage
-  dark-src="/images/guides/fa/dark/database/create-namespace.png"
-  light-src="/images/guides/fa/light/database/create-namespace.png"
+  dark-src="/images/guides/fa/dark/database/create-namespace.webp"
+  light-src="/images/guides/fa/light/database/create-namespace.webp"
   alt="ساخت پروژه"
 />
 
@@ -63,16 +63,16 @@
 - **فضای ذخیره‌سازی ما**: انتخاب یک دیتاسنتر و انتخاب مستقیم یکی از صندوقچه‌های آبجکت استوریج موجود در ویراک‌کلود. با انتخاب صندوقچه، جزئیات آن (نام صندوقچه، آدرس Endpoint، منطقه و کلید دسترسی) به‌صورت خودکار نمایش داده می‌شود.
 
 <DarkModeImage
-  dark-src="/images/guides/fa/dark/database/backup-storage/our-storage.png"
-  light-src="/images/guides/fa/light/database/backup-storage/our-storage.png"
+  dark-src="/images/guides/fa/dark/database/backup-storage/our-storage.webp"
+  light-src="/images/guides/fa/light/database/backup-storage/our-storage.webp"
   alt="فضای ذخیره‌سازی ویراک‌کلود"
 />
 
 - **سفارشی (S3)**: اتصال به هر فضای ذخیره‌سازی دیگر سازگار با S3 با وارد کردن نام ذخیره‌سازی، آدرس Endpoint، نام صندوقچه، منطقه، کلید دسترسی و کلید محرمانه. همچنین می‌توانید بر اساس نیاز ارائه‌دهنده خود، گزینه‌های **Force Path Style** و **Verify TLS certificate** را فعال کنید.
 
 <DarkModeImage
-  dark-src="/images/guides/fa/dark/database/backup-storage/custom-storage.png"
-  light-src="/images/guides/fa/light/database/backup-storage/custom-storage.png"
+  dark-src="/images/guides/fa/dark/database/backup-storage/custom-storage.webp"
+  light-src="/images/guides/fa/light/database/backup-storage/custom-storage.webp"
   alt="فضای ذخیره‌سازی سفارشی"
 />
 
@@ -90,7 +90,7 @@
 از همین‌جا می‌توانید فضای ذخیره‌سازی متصل‌شده را **حذف** کنید تا از پروژه جدا شود.
 
 <DarkModeImage
-  dark-src="/images/guides/fa/dark/database/backup-storage/connected-backup-storage.png"
-  light-src="/images/guides/fa/light/database/backup-storage/connected-backup-storage.png"
+  dark-src="/images/guides/fa/dark/database/backup-storage/connected-backup-storage.webp"
+  light-src="/images/guides/fa/light/database/backup-storage/connected-backup-storage.webp"
   alt="فضای ذخیره‌سازی بکاپ متصل‌شده"
 />

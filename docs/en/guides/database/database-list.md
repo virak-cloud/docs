@@ -5,8 +5,8 @@
 This page shows all the databases created inside a namespace. To reach this page, open a namespace from the [List of Namespaces](./namespace-list.md) page.
 
 <DarkModeImage
-  dark-src="/images/guides/en/dark/database/database-list.png"
-  light-src="/images/guides/en/light/database/database-list.png"
+  dark-src="/images/guides/en/dark/database/database-list.webp"
+  light-src="/images/guides/en/light/database/database-list.webp"
   alt="List of Databases"
 />
 
@@ -32,8 +32,8 @@ Each database has the following actions available:
 To [create a new database](./create.md) inside the current namespace, click the **Create Database** button at the top of the page. This opens the [database creation page](./create.md), where you choose the engine, version, and resource package.
 
 <DarkModeImage
-  dark-src="/images/guides/en/dark/database/database-list-create-button.png"
-  light-src="/images/guides/en/light/database/database-list-create-button.png"
+  dark-src="/images/guides/en/dark/database/database-list-create-button.webp"
+  light-src="/images/guides/en/light/database/database-list-create-button.webp"
   alt="Create Database Button"
 />
 
@@ -42,7 +42,7 @@ To [create a new database](./create.md) inside the current namespace, click the 
 Use the **List of Namespaces** link at the top of the page to go back and switch to a different namespace.
 
 <DarkModeImage
-  dark-src="/images/guides/en/dark/database/database-list-to-namespace.png"
-  light-src="/images/guides/en/light/database/database-list-to-namespace.png"
+  dark-src="/images/guides/en/dark/database/database-list-to-namespace.webp"
+  light-src="/images/guides/en/light/database/database-list-to-namespace.webp"
   alt="Back to Namespaces"
 />

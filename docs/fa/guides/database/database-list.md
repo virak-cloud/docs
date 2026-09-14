@@ -5,8 +5,8 @@
 این صفحه تمام دیتابیس‌های ساخته‌شده داخل یک پروژه را نمایش می‌دهد. برای رسیدن به این صفحه، از [لیست پروژه‌ها](./namespace-list.md) یک پروژه را باز کنید.
 
 <DarkModeImage
-  dark-src="/images/guides/fa/dark/database/database-list.png"
-  light-src="/images/guides/fa/light/database/database-list.png"
+  dark-src="/images/guides/fa/dark/database/database-list.webp"
+  light-src="/images/guides/fa/light/database/database-list.webp"
   alt="لیست دیتابیس‌ها"
 />
 
@@ -32,8 +32,8 @@
 برای [ساخت دیتابیس](./create.md) جدید داخل پروژه فعلی، روی دکمه **ایجاد دیتابیس** در بالای صفحه کلیک کنید. با این کار وارد [صفحه ساخت دیتابیس](./create.md) می‌شوید، جایی که موتور، نسخه و بسته منابع را انتخاب می‌کنید.
 
 <DarkModeImage
-  dark-src="/images/guides/fa/dark/database/database-list-create-button.png"
-  light-src="/images/guides/fa/light/database/database-list-create-button.png"
+  dark-src="/images/guides/fa/dark/database/database-list-create-button.webp"
+  light-src="/images/guides/fa/light/database/database-list-create-button.webp"
   alt="دکمه ساخت دیتابیس"
 />
 
@@ -42,7 +42,7 @@
 برای بازگشت و جابه‌جایی بین پروژه‌های مختلف، از لینک **لیست پروژه‌ها** در بالای صفحه استفاده کنید.
 
 <DarkModeImage
-  dark-src="/images/guides/fa/dark/database/database-list-to-namespace.png"
-  light-src="/images/guides/fa/light/database/database-list-to-namespace.png"
+  dark-src="/images/guides/fa/dark/database/database-list-to-namespace.webp"
+  light-src="/images/guides/fa/light/database/database-list-to-namespace.webp"
   alt="بازگشت به لیست پروژه‌ها"
 />
