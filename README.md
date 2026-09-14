@@ -13,7 +13,7 @@ This repository powers [docs.virakcloud.com](https://docs.virakcloud.com), built
 - **Comments**: Page comments powered by [Remark42](https://remark42.com/).
 - **Analytics**: Google Analytics integration via `vitepress-plugin-google-analytics`.
 - **Image zoom**: Clickable image zoom powered by [medium-zoom](https://github.com/francoischalifour/medium-zoom).
-- **Image optimization tooling**: A built-in script (`scripts/optimize-images.mjs`) converts screenshots to WebP automatically. See [CONTRIBUTING.md](./CONTRIBUTING.md#optimizing-images) for usage.
+- **Image optimization tooling**: A built-in script (`scripts/optimize-images.mjs`) converts screenshots to WebP automatically. See [CONTRIBUTING.md](./CONTRIBUTING.md#optimizing-images-gear) for usage.
 
 ## Tech Stack
 
@@ -103,7 +103,7 @@ Before committing new screenshots, convert them to WebP using the built-in scrip
 npm run images:optimize
 ```
 
-See [CONTRIBUTING.md](./CONTRIBUTING.md#optimizing-images) for full usage details and available flags.
+See [CONTRIBUTING.md](./CONTRIBUTING.md#optimizing-images-gear) for full usage details and available flags.
 
 ## Project Structure
 
