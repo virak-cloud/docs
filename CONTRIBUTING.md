@@ -1,9 +1,9 @@
 # Contributing to VirakCloud :cloud: Documentation
 
-- [Getting Started](#getting-started)
-- [Adding a New Guide Page](#adding-page)
-- [Optimizing Images](#optimizing-images)
-- [Running the Development Server](#run-on-dev)
+- [Getting Started](#getting-started-wave)
+- [Adding a New Guide Page](#adding-images-framed_picture)
+- [Optimizing Images](#optimizing-images-gear)
+- [Running the Development Server](#running-the-development-server-rocket)
 - [Building for Production](#building-for-production)
 
 Thank you for your interest in contributing to the VirakCloud Documentation! This guide will walk you through the steps to add new pages, use images, configure paths, and manage comments effectively.
@@ -82,7 +82,7 @@ To add images:
 
 1. **Place the Image File**: Save it under `docs/public/images/...`, following the existing folder structure (organized by language and section, with separate `light` and `dark` subfolders for theme-aware screenshots).
 
-> **:warning: Note:** Images must be in WEBP format before they are committed. Use the [image optimization script](#optimizing-images) below to convert and compress screenshots automatically — do not add raw `.jpg`/`.png` files to a PR.
+> **:warning: Note:** Images must be in WEBP format before they are committed. Use the [image optimization script](#optimizing-images-gear) below to convert and compress screenshots automatically — do not add raw `.jpg`/`.png` files to a PR.
 
 2. **Use in Markdown**:
 
@@ -156,7 +156,7 @@ After running the script:
 2. Run `git status` / `git diff` to confirm only the expected image and `.md` files changed.
 3. Start the dev server (`npm run docs:dev`) and open the affected pages to confirm the screenshots still render correctly.
 
-## Running the Development Server :rocket: {#run-on-dev}
+## Running the Development Server :rocket:
 
 To start the development server, run one of the following commands based on your package manager:
 
@@ -178,7 +178,7 @@ yarn docs:dev
 pnpm docs:dev
 ```
 
-## Building for Production :hammer_and_wrench: {#building-for-production}
+## Building for Production :hammer_and_wrench:
 
 To build the project for production, use one of the following commands:
 
