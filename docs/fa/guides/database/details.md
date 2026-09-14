@@ -20,8 +20,8 @@
 - **اطلاعات سرویس**: نام پلن فعلی، دیتاسنتر، هزینه سرویس، پردازنده، حافظه، فضای دیسک و تعداد اتصال فعال در لحظه.
 
 <DarkModeImage
-  dark-src="/images/guides/fa/dark/database/details/overview.png"
-  light-src="/images/guides/fa/light/database/details/overview.png"
+  dark-src="/images/guides/fa/dark/database/details/overview.webp"
+  light-src="/images/guides/fa/light/database/details/overview.webp"
   alt="نمای کلی دیتابیس"
 />
 
@@ -33,8 +33,8 @@
 - یک **پلن سخت‌افزاری** دیگر (small، medium یا large) انتخاب کنید که هرکدام پردازنده، حافظه، فضای دیسک، تعداد اتصال فعال و قیمت ساعتی/ماهانه را نشان می‌دهند.
 
 <DarkModeImage
-  dark-src="/images/guides/fa/dark/database/details/scale.png"
-  light-src="/images/guides/fa/light/database/details/scale.png"
+  dark-src="/images/guides/fa/dark/database/details/scale.webp"
+  light-src="/images/guides/fa/light/database/details/scale.webp"
   alt="ارتقای دیتابیس"
 />
 
@@ -71,8 +71,8 @@
 - **بکاپ‌ها**: «بکاپی وجود ندارد.» — دکمه **بکاپ فوری** تا زمان اتصال یک فضای ذخیره‌سازی به پروژه غیرفعال است.
 
 <DarkModeImage
-  dark-src="/images/guides/fa/dark/database/details/backup/without-backup.png"
-  light-src="/images/guides/fa/light/database/details/backup/without-backup.png"
+  dark-src="/images/guides/fa/dark/database/details/backup/without-backup.webp"
+  light-src="/images/guides/fa/light/database/details/backup/without-backup.webp"
   alt="تب بکاپ بدون فضای ذخیره‌سازی"
 />
 
@@ -85,8 +85,8 @@
 - **بکاپ‌ها**: لیستی قابل جستجو و فیلتر از تمام بکاپ‌های گرفته‌شده، شامل نام، وضعیت، مسیر مقصد، تاریخ ساخت، تاریخ تکمیل و آخرین بازیابی. برای هر بکاپ عملیات‌های **تاریخچه**، **بازیابی** و **حذف** در دسترس است. همچنین می‌توانید در هر لحظه با دکمه **بکاپ فوری** یک بکاپ آنی بگیرید.
 
 <DarkModeImage
-  dark-src="/images/guides/fa/dark/database/details/backup/with-backup.png"
-  light-src="/images/guides/fa/light/database/details/backup/with-backup.png"
+  dark-src="/images/guides/fa/dark/database/details/backup/with-backup.webp"
+  light-src="/images/guides/fa/light/database/details/backup/with-backup.webp"
   alt="تب بکاپ با فضای ذخیره‌سازی متصل"
 />
 
@@ -102,8 +102,8 @@
 فیلدهای نمایش‌داده‌شده در مودال بر اساس نوع زمان‌بندی انتخابی تغییر می‌کنند. یک خط توضیحی، زمان‌بندی انتخاب‌شده را به زبان ساده تأیید می‌کند (مثلاً «این زمان‌بندی هر روز، در ساعت ۲:۰۰، از پایگاه داده شما نسخه پشتیبان تهیه می‌کند»).
 
 <DarkModeImage
-  dark-src="/images/guides/fa/dark/database/details/backup/create-schedule.png"
-  light-src="/images/guides/fa/light/database/details/backup/create-schedule.png"
+  dark-src="/images/guides/fa/dark/database/details/backup/create-schedule.webp"
+  light-src="/images/guides/fa/light/database/details/backup/create-schedule.webp"
   alt="ساخت زمان‌بندی بکاپ"
 />
 
@@ -130,7 +130,7 @@
 - **MongoDB**: تعداد کوئری در ثانیه (QPS).
 
 <DarkModeImage
-  dark-src="/images/guides/fa/dark/database/details/monitoring.png"
-  light-src="/images/guides/fa/light/database/details/monitoring.png"
+  dark-src="/images/guides/fa/dark/database/details/monitoring.webp"
+  light-src="/images/guides/fa/light/database/details/monitoring.webp"
   alt="مانیتورینگ دیتابیس"
 />

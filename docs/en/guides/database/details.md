@@ -20,8 +20,8 @@ The Overview tab shows two cards:
 - **Service Information**: the current plan name, data center, service cost, processor (CPU), memory, disk space, and the number of currently active connections.
 
 <DarkModeImage
-  dark-src="/images/guides/en/dark/database/details/overview.png"
-  light-src="/images/guides/en/light/database/details/overview.png"
+  dark-src="/images/guides/en/dark/database/details/overview.webp"
+  light-src="/images/guides/en/light/database/details/overview.webp"
   alt="Database Overview"
 />
 
@@ -33,8 +33,8 @@ Clicking **Scale** in the header opens a dialog where you can:
 - Choose a different **hardware plan** (small, medium, or large), each showing CPU, memory, disk space, currently active connections, and hourly/monthly price.
 
 <DarkModeImage
-  dark-src="/images/guides/en/dark/database/details/scale.png"
-  light-src="/images/guides/en/light/database/details/scale.png"
+  dark-src="/images/guides/en/dark/database/details/scale.webp"
+  light-src="/images/guides/en/light/database/details/scale.webp"
   alt="Scale Database"
 />
 
@@ -71,8 +71,8 @@ If the namespace has no backup storage connected yet, the tab shows three empty 
 - **Backups**: "No backups yet." — the **Backup Now** button is disabled until a backup storage is connected to the namespace.
 
 <DarkModeImage
-  dark-src="/images/guides/en/dark/database/details/backup/without-backup.png"
-  light-src="/images/guides/en/light/database/details/backup/without-backup.png"
+  dark-src="/images/guides/en/dark/database/details/backup/without-backup.webp"
+  light-src="/images/guides/en/light/database/details/backup/without-backup.webp"
   alt="Backup Tab Without Storage"
 />
 
@@ -85,8 +85,8 @@ Once the namespace has a backup storage connected, the **Create Schedule** and *
 - **Backups**: a searchable, filterable list of all backups taken so far, showing name, state, destination path, created date, completed date, and latest restore. Each backup has **History**, **Restore**, and **Delete** actions. Use the **Backup Now** button at any time to take an instant backup.
 
 <DarkModeImage
-  dark-src="/images/guides/en/dark/database/details/backup/with-backup.png"
-  light-src="/images/guides/en/light/database/details/backup/with-backup.png"
+  dark-src="/images/guides/en/dark/database/details/backup/with-backup.webp"
+  light-src="/images/guides/en/light/database/details/backup/with-backup.webp"
   alt="Backup Tab With Storage"
 />
 
@@ -102,8 +102,8 @@ Clicking **Create Schedule** opens a dialog where you can set up a recurring bac
 The fields shown in the dialog change depending on the schedule type you select. A summary line confirms the schedule in plain language (e.g., "This schedule creates a backup of your database every day at 2:00").
 
 <DarkModeImage
-  dark-src="/images/guides/en/dark/database/details/backup/create-schedule.png"
-  light-src="/images/guides/en/light/database/details/backup/create-schedule.png"
+  dark-src="/images/guides/en/dark/database/details/backup/create-schedule.webp"
+  light-src="/images/guides/en/light/database/details/backup/create-schedule.webp"
   alt="Create Backup Schedule"
 />
 
@@ -130,7 +130,7 @@ In addition, one chart is shown based on your database engine:
 - **MongoDB**: Queries Per Second (QPS).
 
 <DarkModeImage
-  dark-src="/images/guides/en/dark/database/details/monitoring.png"
-  light-src="/images/guides/en/light/database/details/monitoring.png"
+  dark-src="/images/guides/en/dark/database/details/monitoring.webp"
+  light-src="/images/guides/en/light/database/details/monitoring.webp"
   alt="Database Monitoring"
 />

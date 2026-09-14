@@ -13,6 +13,7 @@ This repository powers [docs.virakcloud.com](https://docs.virakcloud.com), built
 - **Comments**: Page comments powered by [Remark42](https://remark42.com/).
 - **Analytics**: Google Analytics integration via `vitepress-plugin-google-analytics`.
 - **Image zoom**: Clickable image zoom powered by [medium-zoom](https://github.com/francoischalifour/medium-zoom).
+- **Image optimization tooling**: A built-in script (`scripts/optimize-images.mjs`) converts screenshots to WebP automatically. See [CONTRIBUTING.md](./CONTRIBUTING.md#optimizing-images) for usage.
 
 ## Tech Stack
 
@@ -20,6 +21,7 @@ This repository powers [docs.virakcloud.com](https://docs.virakcloud.com), built
 - Vue 3 (`<script setup>`)
 - TypeScript
 - [rtlcss](https://rtlcss.com/) for RTL stylesheet generation
+- [sharp](https://www.npmjs.com/package/sharp) for image conversion/optimization
 - dotenv for environment-based configuration
 
 ## Prerequisites
@@ -93,6 +95,16 @@ yarn docs:preview
 pnpm docs:preview
 ```
 
+## Optimizing Images
+
+Before committing new screenshots, convert them to WebP using the built-in script:
+
+```bash
+npm run images:optimize
+```
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md#optimizing-images) for full usage details and available flags.
+
 ## Project Structure
 
 ```
@@ -104,6 +116,8 @@ pnpm docs:preview
 │   ├── en/guides/             # English documentation pages
 │   ├── fa/guides/             # Persian documentation pages
 │   └── public/                # Static assets (images, fonts, favicon)
+├── scripts/
+│   └── optimize-images.mjs    # Image -> WebP conversion tool
 ├── .github/workflows/         # CI/CD (build and deploy)
 ├── CONTRIBUTING.md            # Guide for adding and editing pages
 └── package.json
@@ -111,12 +125,12 @@ pnpm docs:preview
 
 ## Contributing
 
-Contributions are welcome. Please read [CONTRIBUTING.md](./CONTRIBUTING.md) for details on how to add a new guide page, use images (including dark-mode variants), configure frontmatter, and update the sidebar navigation.
+Contributions are welcome. Please read [CONTRIBUTING.md](./CONTRIBUTING.md) for details on how to add a new guide page, use images (including dark-mode variants and WebP optimization), configure frontmatter, and update the sidebar navigation.
 
 In short:
 
 1. Add your Markdown file under `docs/en/guides/` and/or `docs/fa/guides/`.
-2. Add matching images under `docs/public/images/guides/<lang>/<light|dark>/...` in WEBP format where possible.
+2. Add matching images under `docs/public/images/guides/<lang>/<light|dark>/...`, then run `npm run images:optimize` to convert them to WebP.
 3. Register the new page in the sidebar configuration in `docs/.vitepress/config.mts`.
 4. Open a pull request.
 

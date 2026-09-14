@@ -5,8 +5,8 @@
 این صفحه به شما امکان می‌دهد یک دیتابیس جدید داخل همان پروژه‌ای که از آن وارد این صفحه شده‌اید بسازید. دیتابیس در همان پروژه و همان دیتاسنتر پروژه ساخته می‌شود، بنابراین نیازی به انتخاب مجدد آن‌ها نیست.
 
 <DarkModeImage
-  dark-src="/images/guides/fa/dark/database/create-database.png"
-  light-src="/images/guides/fa/light/database/create-database.png"
+  dark-src="/images/guides/fa/dark/database/create-database.webp"
+  light-src="/images/guides/fa/light/database/create-database.webp"
   alt="ساخت دیتابیس"
 />
 
@@ -48,8 +48,8 @@
 - **قیمت**: هزینه نهایی ساعتی و ماهانه.
 
 <DarkModeImage
-  dark-src="/images/guides/fa/dark/database/create-database-sidebar.png"
-  light-src="/images/guides/fa/light/database/create-database-sidebar.png"
+  dark-src="/images/guides/fa/dark/database/create-database-sidebar.webp"
+  light-src="/images/guides/fa/light/database/create-database-sidebar.webp"
   alt="خلاصه سفارش دیتابیس"
 />
 

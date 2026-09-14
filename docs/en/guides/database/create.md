@@ -5,8 +5,8 @@
 This page lets you create a new database inside the namespace you opened it from. The database will be created in the same namespace and datacenter as its parent, so you don't need to select them again.
 
 <DarkModeImage
-  dark-src="/images/guides/en/dark/database/create-database.png"
-  light-src="/images/guides/en/light/database/create-database.png"
+  dark-src="/images/guides/en/dark/database/create-database.webp"
+  light-src="/images/guides/en/light/database/create-database.webp"
   alt="Create Database"
 />
 
@@ -48,8 +48,8 @@ As you make your selections, the panel on the right updates live with:
 - **Price**: final hourly and monthly cost.
 
 <DarkModeImage
-  dark-src="/images/guides/en/dark/database/create-database-sidebar.png"
-  light-src="/images/guides/en/light/database/create-database-sidebar.png"
+  dark-src="/images/guides/en/dark/database/create-database-sidebar.webp"
+  light-src="/images/guides/en/light/database/create-database-sidebar.webp"
   alt="Database Order Summary"
 />
 
