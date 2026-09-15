@@ -19,7 +19,7 @@
 <DarkModeImage
   dark-src="/images/guides/common/instance/marketplace/1-appliance-services.jpg"
   light-src="/images/guides/common/instance/marketplace/1-appliance-services.jpg"
-  alt="Marketplace - Ready to use Applications"
+  alt="صفحه appliance services تمپلیت با آدرس‌های Web، Webmin، Adminer و SSH/SFTP"
 />
 
 4. دریافت اتوماتیک Let's Encrypt SSL
@@ -28,7 +28,7 @@
 <DarkModeImage
   dark-src="/images/guides/common/instance/marketplace/2-Lets-Encrypt-SSL.webp"
   light-src="/images/guides/common/instance/marketplace/2-Lets-Encrypt-SSL.webp"
-  alt="Marketplace - Ready to use Applications"
+  alt="نمایش گواهی SSL معتبر صادرشده توسط Let's Encrypt برای FQDN سرور در مرورگر"
 />
 
 5. ارائه امکان پیکربندی از طریق منوی گرافیکی confconsole
@@ -37,7 +37,7 @@
 <DarkModeImage
   dark-src="/images/guides/common/instance/marketplace/3-confconsole.jpg"
   light-src="/images/guides/common/instance/marketplace/3-confconsole.jpg"
-  alt="Marketplace - Ready to use Applications"
+  alt="منوی Advanced در confconsole با گزینه Let's Encrypt هایلایت‌شده"
 />
 
 ## مراحل نصب و استفاده
@@ -59,19 +59,19 @@
 <DarkModeImage
   dark-src="/images/guides/common/instance/marketplace/4-mqSql.webp"
   light-src="/images/guides/common/instance/marketplace/4-mqSql.webp"
-  alt="Marketplace - Ready to use Applications"
+  alt="درخواست تعیین رمز عبور جدید برای حساب adminer در MySQL"
 />
 <br/>
 <DarkModeImage
   dark-src="/images/guides/common/instance/marketplace/5-rootPassword.webp"
   light-src="/images/guides/common/instance/marketplace/5-rootPassword.webp"
-  alt="Marketplace - Ready to use Applications"
+  alt="درخواست تعیین رمز عبور جدید برای حساب root"
 />
 <br/>
 <DarkModeImage
   dark-src="/images/guides/common/instance/marketplace/6-wordpressPassword.webp"
   light-src="/images/guides/common/instance/marketplace/6-wordpressPassword.webp"
-  alt="Marketplace - Ready to use Applications"
+  alt="درخواست تعیین رمز عبور جدید برای حساب admin وردپرس"
 />
 
 ::: info توصیه:
@@ -84,7 +84,7 @@
 <DarkModeImage
   dark-src="/images/guides/common/instance/marketplace/7-wordpress-config.webp"
   light-src="/images/guides/common/instance/marketplace/7-wordpress-config.webp"
-  alt="Marketplace - Ready to use Applications"
+  alt="خلاصه سرویس‌های appliance شامل آدرس‌های دسترسی Web، Webmin، Adminer و SSH بعد از پیکربندی"
 />
 
 ## توضیحات بیشتر
@@ -113,7 +113,7 @@
 <DarkModeImage
   dark-src="/images/guides/common/instance/marketplace/8-webmin.jpg"
   light-src="/images/guides/common/instance/marketplace/8-webmin.jpg"
-  alt="Marketplace - Ready to use Applications"
+  alt="صفحه مدیریت فایروال Linux IPTables در Webmin"
 />
 <br/>
 
@@ -140,7 +140,7 @@
 <DarkModeImage
   dark-src="/images/guides/common/instance/marketplace/9-adminer.jpg"
   light-src="/images/guides/common/instance/marketplace/9-adminer.jpg"
-  alt="Marketplace - Ready to use Applications"
+  alt="رابط Adminer با لیست دیتابیس‌های MySQL"
 />
 
 تصویر زیر هم صفحه ورود به بخش `http://85.9.104.4/wp-admin` سرویس ورد پرس را نشان میدهد.
@@ -148,11 +148,11 @@
 <DarkModeImage
   dark-src="/images/guides/common/instance/marketplace/10-wordpress-login.webp"
   light-src="/images/guides/common/instance/marketplace/10-wordpress-login.webp"
-  alt="Marketplace - Ready to use Applications"
+  alt="صفحه ورود به پنل مدیریت وردپرس"
 />
 <br/>
 <DarkModeImage
   dark-src="/images/guides/common/instance/marketplace/11-wordpress-dashboard.webp"
   light-src="/images/guides/common/instance/marketplace/11-wordpress-dashboard.webp"
-  alt="Marketplace - Ready to use Applications"
+  alt="نمایی از داشبورد مدیریت وردپرس بعد از ورود"
 />

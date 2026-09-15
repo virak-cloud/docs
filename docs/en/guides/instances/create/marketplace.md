@@ -21,7 +21,7 @@ This name is mapped to your instance’s address and enables you to connect to i
 <DarkModeImage
   dark-src="/images/guides/common/instance/marketplace/1-appliance-services.jpg"
   light-src="/images/guides/common/instance/marketplace/1-appliance-services.jpg"
-  alt="Marketplace - Ready to use Applications"
+  alt="TurnKey appliance services screen listing Web, Webmin, Adminer, and SSH/SFTP access URLs"
 />
 
 4. Automatic Let's Encrypt SSL Certificate
@@ -30,7 +30,7 @@ This name is mapped to your instance’s address and enables you to connect to i
 <DarkModeImage
   dark-src="/images/guides/common/instance/marketplace/2-Lets-Encrypt-SSL.webp"
   light-src="/images/guides/common/instance/marketplace/2-Lets-Encrypt-SSL.webp"
-  alt="Marketplace - Ready to use Applications"
+  alt="Browser certificate viewer showing a valid SSL certificate issued by Let's Encrypt for the instance's FQDN"
 />
 
 5. Configuration via Graphical Menu (confconsole)
@@ -39,7 +39,7 @@ This name is mapped to your instance’s address and enables you to connect to i
 <DarkModeImage
   dark-src="/images/guides/common/instance/marketplace/3-confconsole.jpg"
   light-src="/images/guides/common/instance/marketplace/3-confconsole.jpg"
-  alt="Marketplace - Ready to use Applications"
+  alt="confconsole Advanced Menu with the Let's Encrypt option highlighted"
 />
 
 ## Installation Steps
@@ -63,19 +63,19 @@ These may include DB username/password, admin panel login credentials, email add
 <DarkModeImage
   dark-src="/images/guides/common/instance/marketplace/4-mqSql.webp"
   light-src="/images/guides/common/instance/marketplace/4-mqSql.webp"
-  alt="Marketplace - Ready to use Applications"
+  alt="Prompt to set a new password for the MySQL 'adminer' account"
 />
 <br/>
 <DarkModeImage
   dark-src="/images/guides/common/instance/marketplace/5-rootPassword.webp"
   light-src="/images/guides/common/instance/marketplace/5-rootPassword.webp"
-  alt="Marketplace - Ready to use Applications"
+  alt="Prompt to set a new password for the root account"
 />
 <br/>
 <DarkModeImage
   dark-src="/images/guides/common/instance/marketplace/6-wordpressPassword.webp"
   light-src="/images/guides/common/instance/marketplace/6-wordpressPassword.webp"
-  alt="Marketplace - Ready to use Applications"
+  alt="Prompt to set a new password for the WordPress 'admin' account"
 />
 
 ::: info Recommendation:
@@ -88,7 +88,7 @@ For example, the image below displays access info for the WordPress web page, We
 <DarkModeImage
   dark-src="/images/guides/common/instance/marketplace/7-wordpress-config.webp"
   light-src="/images/guides/common/instance/marketplace/7-wordpress-config.webp"
-  alt="Marketplace - Ready to use Applications"
+  alt="Appliance services summary showing access URLs for Web, Webmin, Adminer, and SSH after setup"
 />
 
 ## More Info
@@ -117,7 +117,7 @@ The image below shows the Webmin interface, offering powerful configuration tool
 <DarkModeImage
   dark-src="/images/guides/common/instance/marketplace/8-webmin.jpg"
   light-src="/images/guides/common/instance/marketplace/8-webmin.jpg"
-  alt="Marketplace - Ready to use Applications"
+  alt="Webmin Linux IPTables Firewall management page"
 />
 <br/>
 
@@ -144,7 +144,7 @@ Adminer is a lightweight, single-file, open-source database management tool (oft
 <DarkModeImage
   dark-src="/images/guides/common/instance/marketplace/9-adminer.jpg"
   light-src="/images/guides/common/instance/marketplace/9-adminer.jpg"
-  alt="Marketplace - Ready to use Applications"
+  alt="Adminer interface showing the list of MySQL databases"
 />
 
 The following image shows the WordPress login page at: `http://85.9.104.4/wp-admin`
@@ -152,11 +152,11 @@ The following image shows the WordPress login page at: `http://85.9.104.4/wp-adm
 <DarkModeImage
   dark-src="/images/guides/common/instance/marketplace/10-wordpress-login.webp"
   light-src="/images/guides/common/instance/marketplace/10-wordpress-login.webp"
-  alt="Marketplace - Ready to use Applications"
+  alt="WordPress admin panel login page"
 />
 <br/>
 <DarkModeImage
   dark-src="/images/guides/common/instance/marketplace/11-wordpress-dashboard.webp"
   light-src="/images/guides/common/instance/marketplace/11-wordpress-dashboard.webp"
-  alt="Marketplace - Ready to use Applications"
+  alt="WordPress admin dashboard after login"
 />
