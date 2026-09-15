@@ -5,5 +5,5 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/instances/instances-list.webp"
   light-src="/images/guides/fa/light/instances/instances-list.webp"
-  alt="Instances List"
+  alt="لیست سرورها"
 />

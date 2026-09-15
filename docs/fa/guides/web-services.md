@@ -19,7 +19,7 @@ Authorization: Bearer YOUR_TOKEN
 <DarkModeImage
   dark-src="/images/guides/fa/dark/public-api/tokens-list.webp"
   light-src="/images/guides/fa/light/public-api/tokens-list.webp"
-  alt="Web Services - Token List"
+  alt="وب سرویس - لیست توکن‌ها"
 />
 
 در صفحه **توکن‌ها** می‌توانید لیست تمام توکن‌های ایجاد شده را مشاهده کنید.
@@ -42,7 +42,7 @@ Authorization: Bearer YOUR_TOKEN
 <DarkModeImage
   dark-src="/images/guides/fa/dark/public-api/create-token.webp"
   light-src="/images/guides/fa/light/public-api/create-token.webp"
-  alt="Web Services - Create New Token"
+  alt="وب سرویس - ساخت توکن جدید"
 />
 
 برای ایجاد یک توکن جدید:

@@ -12,7 +12,7 @@ After logging into the [panel](https://panel.virakcloud.com/), you can view the 
 <DarkModeImage
   dark-src="/images/guides/en/dark/dashboard-resources.webp"
   light-src="/images/guides/en/light/dashboard-resources.webp"
-  alt="Dashboard Resources"
+  alt="Resources limit"
 />
 
 ## Account Charge

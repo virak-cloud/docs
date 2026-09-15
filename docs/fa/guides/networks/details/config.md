@@ -19,7 +19,7 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/networks/public-ip.webp"
   light-src="/images/guides/fa/light/networks/public-ip.webp"
-  alt="Public IPs"
+  alt="آی پی های عمومی"
 />
 
 ::: warning نکته :

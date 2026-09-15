@@ -12,7 +12,7 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/dashboard-resources.webp"
   light-src="/images/guides/fa/light/dashboard-resources.webp"
-  alt="Dashboard Resources"
+  alt="محدودیت منابع"
 />
 
 ## شارژ حساب

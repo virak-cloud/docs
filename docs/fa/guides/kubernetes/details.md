@@ -7,7 +7,7 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/k8s/cluster-details.webp"
   light-src="/images/guides/fa/light/k8s/cluster-details.webp"
-  alt="Cluster Details"
+  alt="جزئیات کلاستر"
 />
 
 ## جزئیات کلاستر

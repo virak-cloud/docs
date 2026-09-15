@@ -7,7 +7,7 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/accounting/payments-list.webp"
   light-src="/images/guides/fa/light/accounting/payments-list.webp"
-  alt="Payments List"
+  alt="لیست پرداخت ها"
 />
 
 ## آخرین پرداخت
@@ -17,5 +17,5 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/accounting/last-payment.webp"
   light-src="/images/guides/fa/light/accounting/last-payment.webp"
-  alt="Last Payment"
+  alt="آخرین پرداخت"
 />

@@ -5,5 +5,5 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/accounting/gifts.webp"
   light-src="/images/guides/fa/light/accounting/gifts.webp"
-  alt="Gifts List"
+  alt="لیست کدهای هدیه"
 />

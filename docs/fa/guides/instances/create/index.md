@@ -9,7 +9,7 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/instances/name.webp"
   light-src="/images/guides/fa/light/instances/name.webp"
-  alt="Instance Name Field"
+  alt="نام سرور ابری"
 />
 
 ## انتخاب سیستم عامل
@@ -20,7 +20,7 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/instances/OS.webp"
   light-src="/images/guides/fa/light/instances/OS.webp"
-  alt="Select OS"
+  alt="انتخاب سیستم عامل"
 />
 
 ## بازارچه
@@ -31,7 +31,7 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/instances/marketplace.webp"
   light-src="/images/guides/fa/light/instances/marketplace.webp"
-  alt="Marketplace - Ready to use Applications"
+  alt="بازارچه - نرم افزارهای آماده"
 />
 
 شما می‌توانید به [صفحه راهنمای استفاده بازارچه](./marketplace) مراجعه کنید تا لیست نرم‌افزارهای موجود و راهنمای نصب و پیکربندی برخی نرم افزار های بخش بازارچه را در آن صفحه مشاهده نمایید.
@@ -59,7 +59,7 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/instances/hardwareOffering.webp"
   light-src="/images/guides/fa/light/instances/hardwareOffering.webp"
-  alt="Choose Resource (Hardware Offerings)"
+  alt="انتخاب منابع"
 />
 
 ## انتخاب شبکه عمومی یا خصوصی
@@ -71,7 +71,7 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/instances/pubNetwork.webp"
   light-src="/images/guides/fa/light/instances/pubNetwork.webp"
-  alt="Public Networks"
+  alt="انتخاب شبکه عمومی"
 />
 
 ## ویژگی ها اضافه
@@ -81,7 +81,7 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/instances/add-feature.webp"
   light-src="/images/guides/fa/light/instances/add-feature.webp"
-  alt="SSH authentication key - Cloud Init"
+  alt="کلید احراز هویت SSH - Cloud Init"
 />
 
 ## ثبت نهایی
@@ -92,7 +92,7 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/instances/overal-os-info.webp"
   light-src="/images/guides/fa/light/instances/overal-os-info.webp"
-  alt="Overal OS info"
+  alt="اطلاعات کلی سفارش"
 />
 
 ::: info توصیه:

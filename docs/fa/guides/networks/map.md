@@ -5,5 +5,5 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/networks/Net-map.webp"
   light-src="/images/guides/fa/light/networks/Net-map.webp"
-  alt="Network Map"
+  alt="گراف شبکه"
 />
