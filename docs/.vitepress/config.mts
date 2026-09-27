@@ -163,7 +163,7 @@ export default defineConfig({
                   },
                   {
                     text: 'ایجاد سرور ابری',
-                    link: '/fa/guides/instances/create'
+                    link: '/fa/guides/instances/create/'
                   },
                   {
                     text: 'بازارچه',
@@ -205,7 +205,7 @@ export default defineConfig({
                 items: [
                   {
                     text: 'معرفی سرویس',
-                    link: '/fa/guides/database/index'
+                    link: '/fa/guides/database/'
                   },
                   {
                     text: 'لیست پروژه ها',
@@ -370,7 +370,7 @@ export default defineConfig({
                   },
                   {
                     text: 'Create Cloud Instances',
-                    link: '/en/guides/instances/create'
+                    link: '/en/guides/instances/create/'
                   },
                   {
                     text: 'Marketplace',
@@ -412,7 +412,7 @@ export default defineConfig({
                 items: [
                   {
                     text: 'Introduction',
-                    link: '/en/guides/database/index'
+                    link: '/en/guides/database/'
                   },
                   {
                     text: 'List of Namespaces',
