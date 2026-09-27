@@ -321,6 +321,10 @@ export default defineConfig({
                 link: '/fa/guides/web-services'
               },
               {
+                text: 'گزارش رویدادها',
+                link: '/fa/guides/event-logs'
+              },
+              {
                 text: 'گزارش تغییرات',
                 link: '/fa/guides/changelogs'
               }
@@ -522,6 +526,10 @@ export default defineConfig({
               {
                 text: 'Web Services',
                 link: '/en/guides/web-services'
+              },
+              {
+                text: 'Event Logs',
+                link: '/en/guides/event-logs'
               },
               {
                 text: 'Changelog',
