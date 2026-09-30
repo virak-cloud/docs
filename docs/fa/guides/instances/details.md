@@ -5,7 +5,7 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/instances/instance-details.webp"
   light-src="/images/guides/fa/light/instances/instance-details.webp"
-  alt="Instance Details"
+  alt="جزئیات سرور ابری"
 />
 
 ## ردیف اول شامل موارد زیر می‌باشد:

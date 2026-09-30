@@ -5,5 +5,5 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/change-log.webp"
   light-src="/images/guides/fa/light/change-log.webp"
-  alt="Changelogs"
+  alt="لیست تغییرات"
 />

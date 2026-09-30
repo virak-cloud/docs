@@ -5,7 +5,7 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/networks/add-loadbalance.webp"
   light-src="/images/guides/fa/light/networks/add-loadbalance.webp"
-  alt="Create LoadBalance"
+  alt="ساخت توزیع بار"
 />
 
 ## ساخت توزیع بار
@@ -21,7 +21,7 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/networks/loadbalance-entry.webp"
   light-src="/images/guides/fa/light/networks/loadbalance-entry.webp"
-  alt="LoadBalance Entry"
+  alt="ساخت قانون توزیع بار"
 />
 
 بعد از افزودن توزیع بار می توانیم سرورهای ابری مورد نظر خود را بر اساس IP که ارائه دهنده سرویس اصلی ما می باشند را از طریق منو ساخت قانون توزیع کننده بار انتخاب کنیم.

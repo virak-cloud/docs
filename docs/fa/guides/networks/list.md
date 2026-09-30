@@ -5,7 +5,7 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/networks/Network-Detail.webp"
   light-src="/images/guides/fa/light/networks/Network-Detail.webp"
-  alt="Network Details"
+  alt="جزئیات شبکه"
 />
 
 به طور پیش فرض شبکه های عمومی در این بخش وجود خواهند داشت و کاربر مجوز حذف و ورود به جزئیات را برای این شبکه ها نخواهند داشت.
@@ -41,5 +41,5 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/networks/inside-Network.webp"
   light-src="/images/guides/fa/light/networks/inside-Network.webp"
-  alt="Network Details"
+  alt="جزئیات شبکه"
 />

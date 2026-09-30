@@ -20,7 +20,7 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/storage/object-storage/create-object-storage.webp"
   light-src="/images/guides/fa/light/storage/object-storage/create-object-storage.webp"
-  alt="Create Bucket"
+  alt="ساخت صندوقچه"
 />
 
 ایجاد صندوقچه جدید با گزینه‌های زیر انجام می‌شود:
@@ -36,7 +36,7 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/storage/object-storage/details-object-storage.webp"
   light-src="/images/guides/fa/light/storage/object-storage/details-object-storage.webp"
-  alt="Details of Buckets"
+  alt="جزئیات صندوقچه"
 />
 
 کاربران می‌توانند فایل‌ها را در صندوقچه‌های خود مدیریت کنند:

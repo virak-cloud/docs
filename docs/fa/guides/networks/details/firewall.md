@@ -15,7 +15,7 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/networks/add-firewall.webp"
   light-src="/images/guides/fa/light/networks/add-firewall.webp"
-  alt="Create firewall"
+  alt="ساختن فایروال"
 />
 
 <!-- todo: we ca explain more about this fields -->
@@ -31,5 +31,5 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/networks/firewall-entry.webp"
   light-src="/images/guides/fa/light/networks/firewall-entry.webp"
-  alt="Firewall entry"
+  alt="ساختن قانون فایروال"
 />
