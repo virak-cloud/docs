@@ -177,60 +177,6 @@ export default defineConfig({
                 collapsed: true
               },
               {
-                text: 'ذخیره سازی ابری',
-                items: [
-                  {
-                    text: 'دیسک های مجازی',
-                    link: '/fa/guides/storage/virtual-disk'
-                  },
-                  {
-                    text: 'آبجکت استوریج',
-                    link: '/fa/guides/storage/object-storage'
-                  }
-                ],
-                collapsed: true
-              },
-              {
-                text: 'کوبرنتیز',
-                items: [
-                  {
-                    text: 'ایجاد کلاستر',
-                    link: '/fa/guides/kubernetes/create'
-                  },
-                  {
-                    text: 'جزئیات کلاستر',
-                    link: '/fa/guides/kubernetes/details'
-                  }
-                ],
-                collapsed: true
-              },
-              {
-                text: 'دیتابیس ابری',
-                items: [
-                  {
-                    text: 'معرفی سرویس',
-                    link: '/fa/guides/database/'
-                  },
-                  {
-                    text: 'لیست پروژه ها',
-                    link: '/fa/guides/database/namespace-list'
-                  },
-                  {
-                    text: 'لیست دیتابیس ها',
-                    link: '/fa/guides/database/database-list'
-                  },
-                  {
-                    text: 'ایجاد دیتابیس',
-                    link: '/fa/guides/database/create'
-                  },
-                  {
-                    text: 'جزئیات دیتابیس',
-                    link: '/fa/guides/database/details'
-                  }
-                ],
-                collapsed: true
-              },
-              {
                 text: 'شبکه های مجازی',
                 items: [
                   {
@@ -276,6 +222,60 @@ export default defineConfig({
                   {
                     text: 'ایجاد شبکه',
                     link: '/fa/guides/networks/create'
+                  }
+                ],
+                collapsed: true
+              },
+              {
+                text: 'ذخیره سازی ابری',
+                items: [
+                  {
+                    text: 'دیسک های مجازی',
+                    link: '/fa/guides/storage/virtual-disk'
+                  },
+                  {
+                    text: 'آبجکت استوریج',
+                    link: '/fa/guides/storage/object-storage'
+                  }
+                ],
+                collapsed: true
+              },
+              {
+                text: 'دیتابیس ابری',
+                items: [
+                  {
+                    text: 'معرفی سرویس',
+                    link: '/fa/guides/database/'
+                  },
+                  {
+                    text: 'لیست پروژه ها',
+                    link: '/fa/guides/database/namespace-list'
+                  },
+                  {
+                    text: 'لیست دیتابیس ها',
+                    link: '/fa/guides/database/database-list'
+                  },
+                  {
+                    text: 'ایجاد دیتابیس',
+                    link: '/fa/guides/database/create'
+                  },
+                  {
+                    text: 'جزئیات دیتابیس',
+                    link: '/fa/guides/database/details'
+                  }
+                ],
+                collapsed: true
+              },
+              {
+                text: 'کوبرنتیز',
+                items: [
+                  {
+                    text: 'ایجاد کلاستر',
+                    link: '/fa/guides/kubernetes/create'
+                  },
+                  {
+                    text: 'جزئیات کلاستر',
+                    link: '/fa/guides/kubernetes/details'
                   }
                 ],
                 collapsed: true
@@ -384,60 +384,6 @@ export default defineConfig({
                 collapsed: true
               },
               {
-                text: 'Cloud Storage',
-                items: [
-                  {
-                    text: 'Virtual Disks',
-                    link: '/en/guides/storage/virtual-disk'
-                  },
-                  {
-                    text: 'Object Storage',
-                    link: '/en/guides/storage/object-storage'
-                  }
-                ],
-                collapsed: true
-              },
-              {
-                text: 'Kubernetes',
-                items: [
-                  {
-                    text: 'Create Cluster',
-                    link: '/en/guides/kubernetes/create'
-                  },
-                  {
-                    text: 'Cluster Details',
-                    link: '/en/guides/kubernetes/details'
-                  }
-                ],
-                collapsed: true
-              },
-              {
-                text: 'Managed Database',
-                items: [
-                  {
-                    text: 'Introduction',
-                    link: '/en/guides/database/'
-                  },
-                  {
-                    text: 'List of Namespaces',
-                    link: '/en/guides/database/namespace-list'
-                  },
-                  {
-                    text: 'List of Databases',
-                    link: '/en/guides/database/database-list'
-                  },
-                  {
-                    text: 'Create Database',
-                    link: '/en/guides/database/create'
-                  },
-                  {
-                    text: 'Database Details',
-                    link: '/en/guides/database/details'
-                  }
-                ],
-                collapsed: true
-              },
-              {
                 text: 'Virtual Networks',
                 items: [
                   {
@@ -483,6 +429,60 @@ export default defineConfig({
                   {
                     text: 'Create Network',
                     link: '/en/guides/networks/create'
+                  }
+                ],
+                collapsed: true
+              },
+              {
+                text: 'Cloud Storage',
+                items: [
+                  {
+                    text: 'Virtual Disks',
+                    link: '/en/guides/storage/virtual-disk'
+                  },
+                  {
+                    text: 'Object Storage',
+                    link: '/en/guides/storage/object-storage'
+                  }
+                ],
+                collapsed: true
+              },
+              {
+                text: 'Managed Database',
+                items: [
+                  {
+                    text: 'Introduction',
+                    link: '/en/guides/database/'
+                  },
+                  {
+                    text: 'List of Namespaces',
+                    link: '/en/guides/database/namespace-list'
+                  },
+                  {
+                    text: 'List of Databases',
+                    link: '/en/guides/database/database-list'
+                  },
+                  {
+                    text: 'Create Database',
+                    link: '/en/guides/database/create'
+                  },
+                  {
+                    text: 'Database Details',
+                    link: '/en/guides/database/details'
+                  }
+                ],
+                collapsed: true
+              },
+              {
+                text: 'Kubernetes',
+                items: [
+                  {
+                    text: 'Create Cluster',
+                    link: '/en/guides/kubernetes/create'
+                  },
+                  {
+                    text: 'Cluster Details',
+                    link: '/en/guides/kubernetes/details'
                   }
                 ],
                 collapsed: true
