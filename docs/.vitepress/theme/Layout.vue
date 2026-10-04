@@ -46,37 +46,33 @@
     'startViewTransition' in document &&
     window.matchMedia('(prefers-reduced-motion: no-preference)').matches
 
-  provide(
-    'toggle-appearance',
-    async ({ clientX: x, clientY: y }: MouseEvent) => {
-      if (!enableTransitions()) {
-        isDark.value = !isDark.value
-        return
-      }
-
-      const clipPath = [
-        `circle(0px at ${x}px ${y}px)`,
-        `circle(${Math.hypot(
-          Math.max(x, innerWidth - x),
-          Math.max(y, innerHeight - y)
-        )}px at ${x}px ${y}px)`
-      ]
-
-      await document.startViewTransition(async () => {
-        isDark.value = !isDark.value
-        await nextTick()
-      }).ready
-
-      document.documentElement.animate(
-        { clipPath: isDark.value ? clipPath.reverse() : clipPath },
-        {
-          duration: 300,
-          easing: 'ease-in',
-          pseudoElement: `::view-transition-${isDark.value ? 'old' : 'new'}(root)`
-        }
-      )
+  provide('toggle-appearance', ({ clientX, clientY }: MouseEvent) => {
+    if (!enableTransitions()) {
+      isDark.value = !isDark.value
+      return
     }
-  )
+
+    const x = (100 * clientX) / innerWidth
+    const y = (100 * clientY) / innerHeight
+
+    const maxRadius =
+      (100 *
+        Math.hypot(
+          Math.max(clientX, innerWidth - clientX),
+          Math.max(clientY, innerHeight - clientY)
+        )) /
+      (Math.hypot(innerWidth, innerHeight) / Math.SQRT2)
+
+    const root = document.documentElement
+    root.style.setProperty('--switch-x', `${x}%`)
+    root.style.setProperty('--switch-y', `${y}%`)
+    root.style.setProperty('--switch-r', `${maxRadius}%`)
+
+    document.startViewTransition(async () => {
+      isDark.value = !isDark.value
+      await nextTick()
+    })
+  })
 </script>
 
 <template>
@@ -110,14 +106,26 @@
     mix-blend-mode: normal;
   }
 
-  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: switch-appearance 300ms ease-in;
+  }
+
   .dark::view-transition-new(root) {
+    animation: none;
+  }
+
+  .dark::view-transition-old(root) {
+    animation: switch-appearance 300ms ease-in reverse forwards;
     z-index: 1;
   }
 
-  ::view-transition-new(root),
-  .dark::view-transition-old(root) {
-    z-index: 9999;
+  @keyframes switch-appearance {
+    from {
+      clip-path: circle(0 at var(--switch-x) var(--switch-y));
+    }
+    to {
+      clip-path: circle(var(--switch-r) at var(--switch-x) var(--switch-y));
+    }
   }
 
   .VPSwitchAppearance {
