@@ -169,6 +169,10 @@ This tab shows the disks you have attached to the server in addition to its prim
 
 Additional disks are usually used when you run out of initial space, to use LVM, or to keep database and other data on a separate disk.
 
+::: warning Note
+To attach a disk to a cloud server, the server must be **running** and must **not have any snapshots**. If you have created snapshots for the server, delete them first from the [Snapshots](#snapshots) tab. If the server is stopped, start it first and then attach the disk.
+:::
+
 <DarkModeImage
   dark-src="/images/guides/en/dark/instances/details-volumes.webp"
   light-src="/images/guides/en/light/instances/details-volumes.webp"
