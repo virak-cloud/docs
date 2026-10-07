@@ -9,7 +9,7 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/networks/create-network-switch.webp"
   light-src="/images/guides/fa/light/networks/create-network-switch.webp"
-  alt="Create Virtual Swtich"
+  alt="ساخت سوئیچ مجازی"
 />
 
 ## روتر مجازی (شبکه خصوصی لایه دو + لایه سه) {#l3}
@@ -19,7 +19,7 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/networks/create-network-router.webp"
   light-src="/images/guides/fa/light/networks/create-network-router.webp"
-  alt="Create Virtual Router"
+  alt="ساخت روتر مجازی"
 />
 
 در این بخش می توانید نامی را برای شبکه خصوصی انتخاب و رنج شبکه داخلی خود را تعیین کنید.
