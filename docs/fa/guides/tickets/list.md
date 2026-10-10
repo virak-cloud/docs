@@ -5,5 +5,5 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/tickets/support.webp"
   light-src="/images/guides/fa/light/tickets/support.webp"
-  alt="Tickets list"
+  alt="لیست تیکت ها"
 />

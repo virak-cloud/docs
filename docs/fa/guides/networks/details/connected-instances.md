@@ -5,5 +5,5 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/networks/vm-connected.webp"
   light-src="/images/guides/fa/light/networks/vm-connected.webp"
-  alt="Connected Instance"
+  alt="سرورهای متصل"
 />
