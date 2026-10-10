@@ -48,6 +48,10 @@ You don't need to keep checking this page; the panel lets you know. How it tells
 - The bar stays until you choose an option; it doesn't disappear on its own.
 - If you dismiss it, you won't see the message again for that version in the same browser.
 
+::: warning Always Stay Up to Date
+We recommend updating the panel whenever it announces a new version. Until you update, the panel keeps running the previous version, and you may miss fixes, improvements, and important changes. The panel may also look or behave differently from the documentation and the changelog.
+:::
+
 ## When This Page Is Useful
 
 - After an update, to see exactly what changed.
