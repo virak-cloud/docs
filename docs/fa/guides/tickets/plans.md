@@ -5,5 +5,5 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/tickets/support-plan.webp"
   light-src="/images/guides/fa/light/tickets/support-plan.webp"
-  alt="Plans"
+  alt="پلن های پشتیبانی"
 />

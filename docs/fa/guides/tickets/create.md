@@ -9,5 +9,5 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/tickets/register-req.webp"
   light-src="/images/guides/fa/light/tickets/register-req.webp"
-  alt="Ticket create"
+  alt="ساخت تیکت جدید"
 />

@@ -5,7 +5,7 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/storage/virtual-disk/disk-list.webp"
   light-src="/images/guides/fa/light/storage/virtual-disk/disk-list.webp"
-  alt="Disk list"
+  alt="لیست دیسک ها"
 />
 
 ## ایجاد دیسک
@@ -15,10 +15,14 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/storage/virtual-disk/disk-create.webp"
   light-src="/images/guides/fa/light/storage/virtual-disk/disk-create.webp"
-  alt="Create Disk"
+  alt="ایجاد دیسک"
 />
 
 > **نکته:** ایجاد دیسک منجر به اتصال آن به سرور ابری نخواهد شد و جهت اتصال میبایست از طریق گزینه **اتصال به سرور ابری** استفاده کند.
+
+::: warning توجه
+برای اتصال دیسک به یک سرور ابری، آن سرور باید **روشن** باشد و **اسنپ‌شات نداشته باشد**. اگر سرور اسنپ‌شات دارد، ابتدا اسنپ‌شات‌ها را از [صفحه‌ی جزئیات سرور ابری](/fa/guides/instances/details#اسنپ‌شات) حذف کنید.
+:::
 
 ## حذف دیسک
 

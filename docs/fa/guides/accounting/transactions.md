@@ -5,5 +5,5 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/accounting/transaction.webp"
   light-src="/images/guides/fa/light/accounting/transaction.webp"
-  alt="Transactions List"
+  alt="لیست تراکنش ها"
 />

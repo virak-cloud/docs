@@ -25,7 +25,7 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/k8s/create-cluster.webp"
   light-src="/images/guides/fa/light/k8s/create-cluster.webp"
-  alt="Create Cluster"
+  alt="ساخت کلاستر"
 />
 
 1. **انتخاب نام کلاستر:** نامی منحصر به فرد برای کلاستر خود وارد کنید.

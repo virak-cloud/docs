@@ -5,7 +5,7 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/dns/create-domain.webp"
   light-src="/images/guides/fa/light/dns/create-domain.webp"
-  alt="Domain Hosting"
+  alt="میزبانی دامنه"
 />
 
 برای این منظور میتوانند از طریق زیر منوی لیست دامنه ها اقدام به ایجاد دامنه جدید کنند.
@@ -14,7 +14,7 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/dns/add-domain.webp"
   light-src="/images/guides/fa/light/dns/add-domain.webp"
-  alt="Enter Domain"
+  alt="وارد کردن دامنه"
 />
 
 ::: info نکته :
@@ -22,8 +22,12 @@ NSهای ویراک کلود در کادر تنظیمات NS به شما نما�
 <DarkModeImage
   dark-src="/images/guides/fa/dark/dns/add-ns.webp"
   light-src="/images/guides/fa/light/dns/add-ns.webp"
-  alt="Add NS"
+  alt="افزودن NS"
 />
+:::
+
+::: warning هشدار:
+در صورتی که رکوردهای NS ویراک‌کلود ظرف مدت ۷ روز پس از ثبت دامنه در پنل، روی آن تنظیم و ست نشوند، دامنه به‌صورت خودکار از پنل حذف خواهد شد.
 :::
 
 بعد از تایید و ثبت دامنه از طریق منوی جزئیات میتوانید اقدام به ایجاد رکوردهای DNS کرده و از طریق منوی لاگ ها گزارشات مربوط به دامنه خود را مشاهده نمایید.
@@ -35,7 +39,7 @@ NSهای ویراک کلود در کادر تنظیمات NS به شما نما�
 <DarkModeImage
   dark-src="/images/guides/fa/dark/dns/log.webp"
   light-src="/images/guides/fa/light/dns/log.webp"
-  alt="DNS Logs"
+  alt="لاگ ها"
 />
 
 ## رکوردها
@@ -43,7 +47,7 @@ NSهای ویراک کلود در کادر تنظیمات NS به شما نما�
 <DarkModeImage
   dark-src="/images/guides/fa/dark/dns/records.webp"
   light-src="/images/guides/fa/light/dns/records.webp"
-  alt="DNS Records"
+  alt="رکوردها"
 />
 
 از طریق منوی رکوردها اقدامات زیر قابل انجام می باشد.

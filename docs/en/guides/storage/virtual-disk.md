@@ -20,6 +20,10 @@ You can use this option to create an additional disk of any desired size.
 
 > **Note:** Creating a disk will not automatically connect it to a cloud server. You must use the "Connect to Cloud Server" option to link the disk.
 
+::: warning Note
+To attach a disk to a cloud server, the server must be **running** and must **not have any snapshots**. If the server has snapshots, delete them first from the [cloud server details page](/en/guides/instances/details#snapshots).
+:::
+
 ## Delete Disk
 
 If a disk is not connected to any cloud server, the user can delete it.

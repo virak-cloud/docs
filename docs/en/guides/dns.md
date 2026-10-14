@@ -28,6 +28,10 @@ The Virak Cloud name servers will be displayed in the NS settings box.
 
 :::
 
+::: warning Warning:
+If the Virak Cloud name servers (NS) are not configured and verified on your domain within 7 days of adding it, the domain will be automatically deleted from the panel.
+:::
+
 After confirming and registering the domain, you can create DNS records through the Details menu and view reports related to your domain through the Logs menu.
 
 ## Logs

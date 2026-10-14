@@ -5,7 +5,7 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/networks/add-portforward.webp"
   light-src="/images/guides/fa/light/networks/add-portforward.webp"
-  alt="Create Port Forward"
+  alt="ساخت انتقال پورت"
 />
 
 <!-- todo: we ca explain more about this fields -->
@@ -21,5 +21,5 @@
 <DarkModeImage
   dark-src="/images/guides/fa/dark/networks/portforward-entry.webp"
   light-src="/images/guides/fa/light/networks/portforward-entry.webp"
-  alt="PortForward entry"
+  alt="اطلاعات لازم برای ساخت انتقال پورت"
 />
