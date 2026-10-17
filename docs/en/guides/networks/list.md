@@ -1,45 +1,70 @@
 # List of Networks
 
-This [section](https://panel.virakcloud.com/instances/network/list) includes information about public networks as well as private Layer 2 and Layer 2 + 3 networks. In the last column, the subscriber can perform operations such as connecting to and disconnecting from instances, deleting networks, and configuring the desired network by entering the details section.
+In [this section](https://panel.virakcloud.com/instances/network/list) you can see the networks of the selected data center. From here you can create a new network, connect cloud servers to a network or disconnect them, delete a network, and open its details for more settings.
 
 <DarkModeImage
-  dark-src="/images/guides/en/dark/networks/Network-Detail.webp"
-  light-src="/images/guides/en/light/networks/Network-Detail.webp"
-  alt="Network Details"
+  dark-src="/images/guides/en/dark/networks/network-list.webp"
+  light-src="/images/guides/en/light/networks/network-list.webp"
+  alt="List of networks"
 />
 
-By default, public networks will exist in this section, and users will not have permission to delete or enter the details for these networks.
+## Network Types
 
-## Network Operations
+| Type                                     | Purpose                                                                                                                                        |
+| ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Public**                               | Connects a server to the internet. It is in the list by default and shown above the others. It can't be deleted and has no details page.       |
+| **Private Layer 2** (virtual switch)     | Direct connection between your servers, without the internet. You set up IP addressing inside the operating system yourself.                   |
+| **Private Layer 2 + 3** (virtual router) | A connection between servers where the panel handles addressing. Its details page offers a firewall, port forwarding, load balancing, and VPN. |
 
-Network operations include the following:
+To create a private network and choose between these two types, see [Create Network](/en/guides/networks/create).
 
-### Connect Instance to Network
+## Table Columns
 
-By clicking on "Connect to Instance," a list of all machines built by the user is displayed, and the user can connect their instance to the corresponding network.
+The list shows 10 networks per page, with search and a rows-per-page option above it.
 
-::: warning Note 1:
-The desired virtual machine must be in the on state, and if confirmed, the desired instance will be connected to the machine.
+- **Name and type** of the network.
+- **Protocol:** The internet protocol of the network.
+- **Network rate:** The maximum network speed in Mb.
+- **Connection status:** The number in the chip is the number of cloud servers connected to the network.
+- **Actions:** Buttons to connect, disconnect, delete, and open details.
+
+On small screens only the number, name, and type are shown, and the other columns appear when you expand a row.
+
+## Creating a Network
+
+The **Create Network** button opens a dialog on this same page. If you haven't created a network yet, the button is in the center of the page; otherwise it is at the top. If the button is disabled, your account doesn't have network access.
+
+## Actions
+
+| Action                     | Purpose                               | When is it disabled?                                                                   |
+| -------------------------- | ------------------------------------- | -------------------------------------------------------------------------------------- |
+| **Connect to server**      | Connect a cloud server to the network | While another operation is running on this network                                     |
+| **Disconnect from server** | Disconnect a server from the network  | When no server is connected, or another operation is running                           |
+| **Delete**                 | Delete the network                    | For public networks, when a server is connected, or while another operation is running |
+| **Details**                | Open the network's settings           | For public networks, or while the network is being deleted                             |
+
+Hover over a disabled button to see why.
+
+### Connecting a Server to a Network
+
+Click **Connect to server**, choose a server from the list, and confirm. A server that is already connected to this network doesn't appear in the list.
+
+::: warning Note
+The server must be running to be connected to a network.
 :::
 
-::: warning Note 2:
-If the desired instance is not on the list, it has certainly been connected to that network before.
+### Disconnecting a Server from a Network
+
+Click **Disconnect from server**, choose the server, and confirm. If this network is that server's default network, you see a warning message. Because the default network affects the network card configuration and routing inside the operating system, check the server's settings after you disconnect it.
+
+### Deleting a Network
+
+You can only delete a network when no server is connected to it. To confirm, you must enter the network name.
+
+::: tip Note
+To delete a network that has servers, disconnect the servers from it first.
 :::
 
-### Disconnect Instance from Network
+## Status Updates
 
-By clicking on "Disconnect from Instance," the user can disconnect their instance from the desired network.
-
-### Delete Network
-
-If no instance is connected to the desired network, the user can delete their network.
-
-### Network Details
-
-By entering the details section, we can benefit from the capabilities and detailed settings related to the network.
-
-<DarkModeImage
-  dark-src="/images/guides/en/dark/networks/inside-Network.webp"
-  light-src="/images/guides/en/light/networks/inside-Network.webp"
-  alt="Inside Network Details"
-/>
+After you submit an operation (create, connect, disconnect, or delete), the network row stays in a loading state and the list refreshes automatically. You don't need to reload the page.
